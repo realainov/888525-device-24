@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Юрий Мамаев](https://up.htmlacademy.ru/htmlcss/24/user/888525).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Горбач](https://htmlacademy.ru/profile/lemberg).
 
 ---
 
