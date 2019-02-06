@@ -28,7 +28,7 @@
   <nav class="site-header__site-navigation site-navigation">
     <ul class="site-navigation__list">
       <li class="site-navigation__item">
-        <a href="#">Каталог товаров</a>
+        <a class="site-navigation__catalog" href="#">Каталог товаров</a>
         <ul class="site-navigation__inner-list">
           <li class="site-navigation__inner-item"><a href="#">Виртуальная реальность</a></li>
           <li class="site-navigation__inner-item"><a href="monopods.html">Моноподы для селфи</a></li>
@@ -58,18 +58,17 @@
         </p>
         <table class="goods__description">
           <tr>
-            <th>Длина палки</th>
-            <th>Вес палки</th>
-            <th>Материал</th>
-          </tr>
-          <tr>
             <td>8,5 м</td>
             <td>5 кг</td>
             <td>Карбон</td>
           </tr>
+          <tr>
+            <th>Длина палки</th>
+            <th>Вес палки</th>
+            <th>Материал</th>
+          </tr>
         </table>
-        <a href="#">Подробнее</a>
-        <a href="#">1 слайд</a>
+        <a class="goods__detail" href="#">Подробнее</a>
       </li>
       <li class="goods__item">
         <h3 class="visually-hidden">Фитнес-браслет</h3>
@@ -80,14 +79,13 @@
         </p>
         <table class="goods__description">
           <tr>
-            <th>Без подзарядки</th>
-          </tr>
-          <tr>
             <td>48 часов</td>
           </tr>
+          <tr>
+            <th>Без подзарядки</th>
+          </tr>
         </table>
-        <a href="#">Подробнее</a>
-        <a href="#">2 слайд</a>
+        <a class="goods__detail" href="#">Подробнее</a>
       </li>
       <li class="goods__item">
         <h3 class="visually-hidden">Квадрокоптер</h3>
@@ -98,16 +96,15 @@
         </p>
         <table class="goods__description">
           <tr>
-            <th>Дальность полета</th>
-            <th>Радиус поражения</th>
-          </tr>
-          <tr>
             <td>800 м</td>
             <td>50 м</td>
           </tr>
+          <tr>
+            <th>Дальность полета</th>
+            <th>Радиус поражения</th>
+          </tr>
         </table>
-        <a href="#">Подробнее</a>
-        <a href="#">3 слайд</a>
+        <a class="goods__detail" href="#">Подробнее</a>
       </li>
     </ol>
   </section>
@@ -255,11 +252,11 @@
   <h2 class="visually-hidden">Написать нам</h2>
   <form class="modal-contact-us__form" action="https://echo.htmlacademy.ru" method="post">
     <label for="name-field">Ваше имя:</label>
-    <input id="name-field" type="text" name="name" placeholder="Имя Фамилия">
+    <input id="name-field" type="text" name="name" placeholder="Имя Фамилия" aria-label="Имя Фамилия">
     <label for="email-field">Ваш e-mail:</label>
-    <input id="email-field" type="email" name="email" placeholder="email@example.com">
+    <input id="email-field" type="email" name="email" placeholder="email@example.com" aria-label="email@example.com">
     <label for="text-field">Текст письма:</label>
-    <textarea id="text-field" name="text" placeholder="В свободной форме"></textarea>
+    <textarea id="text-field" name="text" placeholder="В свободной форме" aria-label="В свободной форме"></textarea>
     <button class="modal-contact-us__send-button" type="submit">Отправить</button>
   </form>
   <button class="modal__close-button" type="button" title="Закрыть окно">
