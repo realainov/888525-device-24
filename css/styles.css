@@ -397,26 +397,16 @@ b {
 main {
   margin-top: -18px;
 }
-.categories a::before {
-  content: "";
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 160px;
-  height: 160px;
-  display: inline-block;
-}
-.categories a:active::before {
+.categories img:active {
   opacity: 0.5;
 }
-.categories a::after {
-  content: "";
+.categories__logo {
   width: 160px;
   height: 160px;
   background-color: rgba(240, 197, 46, 0.5);
-  display: inline-block;
 }
-.categories a:hover::after,
-.categories a:focus::after {
+.categories__logo:hover,
+.categories__logo:focus {
   background-color: #f0c52e;
 }
 .categories__list {

@@ -313,29 +313,18 @@ main {
 
 .categories {
 
-  a::before {
-    content             : "";
-    background-repeat   : no-repeat;
-    background-position : center;
-    width               : 160px;
-    height              : 160px;
-    display             : inline-block;
-  }
-
-  a:active::before {
+  img:active {
     opacity : 0.5;
   }
 
-  a::after {
-    content          : "";
+  &__logo {
     width            : 160px;
     height           : 160px;
     background-color : @background-orange--half;
-    display          : inline-block;
   }
 
-  a:hover::after,
-  a:focus::after {
+  &__logo:hover,
+  &__logo:focus {
     background-color : @background-orange;
   }
 
