@@ -93,11 +93,6 @@ a {
   color           : black;
 }
 
-p {
-  .text-main(@opensanslight, 15px, 30px, 0.15px);
-  color : #464646;
-}
-
 b {
   font-weight : normal;
 }
@@ -131,6 +126,11 @@ b {
   background-image : none;
   background-color : @background-orange;
   color            : rgba(0, 0, 0, 0.3);
+}
+
+.text {
+  .text-main(@opensanslight, 15px, 30px, 0.15px);
+  color : #464646;
 }
 
 .title {
@@ -466,6 +466,7 @@ main {
 .filters {
   h3 {
     .text-main(@gilroyextrabold, 16px, 24px, 3.2px);
+    text-transform: uppercase;
   }
 
   &__form {
@@ -496,6 +497,7 @@ main {
 
   h3 {
     .text-main(@gilroyextrabold, 16px, 24px, 3.2px);
+    text-transform: uppercase;
   }
 
   a {
