@@ -252,11 +252,11 @@ b {
   letter-spacing: 3.6px;
   text-transform: uppercase;
 }
-.main-logo:hover,
-.main-logo:focus {
+.main-logo[href]:hover,
+.main-logo[href]:focus {
   opacity: 0.6;
 }
-.main-logo:active {
+.main-logo[href]:active {
   opacity: 0.3;
 }
 .modal__close-button {
@@ -272,7 +272,6 @@ b {
   opacity: 0.3;
 }
 .site-header {
-  background-color: rgba(240, 197, 46, 0.5);
   background-image: linear-gradient(to bottom, white 40px, rgba(240, 197, 46, 0.5) 40px);
 }
 .search-form {
@@ -371,7 +370,6 @@ b {
   padding: 0;
 }
 .goods__item {
-  background-color: rgba(240, 197, 46, 0.5);
   background-image: linear-gradient(to bottom, rgba(240, 197, 46, 0.5) 40px, white 40px);
 }
 .goods__item::before {
@@ -531,11 +529,11 @@ main {
 .site-footer__social-list a:active {
   opacity: 0.1;
 }
-.site-footer__social-list .html-academy-logo:hover,
-.site-footer__social-list .html-academy-logo:focus {
+.site-footer .html-academy-logo:hover,
+.site-footer .html-academy-logo:focus {
   opacity: 0.6;
 }
-.site-footer__social-list .html-academy-logo:active {
+.site-footer .html-academy-logo:active {
   opacity: 0.3;
 }
 .site-footer svg {
