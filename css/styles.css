@@ -188,6 +188,13 @@ a {
   text-decoration: none;
   color: black;
 }
+p {
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.15px;
+  color: #464646;
+}
 b {
   font-weight: normal;
 }
@@ -218,13 +225,6 @@ b {
   background-image: none;
   background-color: #f0c52e;
   color: rgba(0, 0, 0, 0.3);
-}
-.text {
-  font-family: "Open Sans Light", Arial, sans-serif;
-  font-size: 15px;
-  line-height: 30px;
-  letter-spacing: 0.15px;
-  color: #464646;
 }
 .title {
   font-family: "Gilroy Extra Bold", Arial, sans-serif;

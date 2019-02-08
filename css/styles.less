@@ -93,6 +93,11 @@ a {
   color           : black;
 }
 
+p {
+  .text-main(@opensanslight, 15px, 30px, 0.15px);
+  color : #464646;
+}
+
 b {
   font-weight : normal;
 }
@@ -126,11 +131,6 @@ b {
   background-image : none;
   background-color : @background-orange;
   color            : rgba(0, 0, 0, 0.3);
-}
-
-.text {
-  .text-main(@opensanslight, 15px, 30px, 0.15px);
-  color : #464646;
 }
 
 .title {
@@ -279,6 +279,7 @@ b {
 }
 
 .goods {
+
   margin : 0;
 
   &__list {
@@ -355,6 +356,7 @@ main {
 }
 
 .companies {
+
   &__list {
     list-style : none;
   }
@@ -448,6 +450,7 @@ main {
 }
 
 .site-main__bread {
+
   a {
     .text-main(@opensanslight, 14px, 24px, 0.14px);
     opacity : 0.3;
@@ -464,6 +467,7 @@ main {
 }
 
 .filters {
+
   h3 {
     .text-main(@gilroyextrabold, 16px, 24px, 3.2px);
     text-transform: uppercase;
