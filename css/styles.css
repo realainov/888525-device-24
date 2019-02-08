@@ -214,6 +214,7 @@ b {
   line-height: 24px;
   letter-spacing: 3.6px;
   background-image: linear-gradient(to bottom, white 8px, #f0c52e 8px, #f0c52e 16px, white 16px);
+  text-transform: uppercase;
 }
 .button:hover,
 .button:focus {
@@ -416,24 +417,6 @@ main {
   line-height: 24px;
   letter-spacing: 0.18px;
 }
-.categories__vr::before {
-  background-image: url("../img/popular-1.svg");
-}
-.categories__monopods::before {
-  background-image: url("../img/popular-2.svg");
-}
-.categories__action-cam::before {
-  background-image: url("../img/popular-3.svg");
-}
-.categories__activity-tracker::before {
-  background-image: url("../img/popular-4.svg");
-}
-.categories__smart-watch::before {
-  background-image: url("../img/popular-5.svg");
-}
-.categories__multi-rotor::before {
-  background-image: url("../img/popular-6.svg");
-}
 .services {
   background-image: linear-gradient(to bottom, white 100px, #e5e5e5 100px);
 }
@@ -443,7 +426,6 @@ main {
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 3.6px;
-  text-transform: uppercase;
 }
 .services__features-list {
   list-style: none;
@@ -631,9 +613,6 @@ main {
   line-height: 24px;
   letter-spacing: 0.7px;
   color: rgba(0, 0, 0, 0.2);
-}
-.cards__button {
-  text-transform: uppercase;
 }
 .cards__compare {
   font-family: "Open Sans Light", Arial, sans-serif;

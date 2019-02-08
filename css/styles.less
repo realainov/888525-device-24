@@ -118,6 +118,7 @@ b {
 .button {
   .text-main(@gilroyextrabold, 18px, 24px, 3.6px);
   background-image : linear-gradient(to bottom, white 8px, @background-orange 8px, @background-orange 16px, white 16px);
+  text-transform: uppercase;
 }
 
 .button:hover,
@@ -332,30 +333,6 @@ main {
     list-style : none;
     .text-main(@gilroyextrabold, 18px, 24px, 0.18px);
   }
-
-  &__vr::before {
-    background-image : url("../img/popular-1.svg");
-  }
-
-  &__monopods::before {
-    background-image : url("../img/popular-2.svg");
-  }
-
-  &__action-cam::before {
-    background-image : url("../img/popular-3.svg");
-  }
-
-  &__activity-tracker::before {
-    background-image : url("../img/popular-4.svg");
-  }
-
-  &__smart-watch::before {
-    background-image : url("../img/popular-5.svg");
-  }
-
-  &__multi-rotor::before {
-    background-image : url("../img/popular-6.svg");
-  }
 }
 
 .services {
@@ -365,7 +342,6 @@ main {
   &__button-list {
     list-style     : none;
     .text-main(@gilroyextrabold, 18px, 24px, 3.6px);
-    text-transform : uppercase;
   }
 
   &__features-list {
@@ -582,10 +558,6 @@ main {
   &__new {
     .text-main(@gilroyextrabold, 14px, 24px, 0.7px);
     color : rgba(0, 0, 0, 0.2);
-  }
-
-  &__button {
-    text-transform : uppercase;
   }
 
   &__compare {
