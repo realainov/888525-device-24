@@ -182,7 +182,20 @@ b {
 }
 
 .site-header {
+
   background-image : linear-gradient(to bottom, white 40px, @background-orange--half 40px);
+
+  &__user-navigation {
+
+    a:hover,
+    a:focus {
+      color: rgba(0, 0, 0, 0.6)
+    }
+
+    a:active {
+      opacity : 0.3;
+    }
+  }
 }
 
 .search-form {
@@ -234,17 +247,7 @@ b {
   }
 }
 
-.user-navigation {
 
-  a:hover,
-  a:focus {
-    opacity : 0.6;
-  }
-
-  a:active {
-    opacity : 0.3;
-  }
-}
 
 .site-navigation {
 
@@ -252,12 +255,12 @@ b {
     .icon("plus.svg", 16px, 16px);
   }
 
-  a:hover,
-  a:focus {
+  a[href]:hover,
+  a[href]:focus {
     opacity : 0.6;
   }
 
-  a:active {
+  a[href]:active {
     opacity : 0.3;
   }
 
@@ -315,10 +318,6 @@ main {
 
 .categories {
 
-  img:active {
-    opacity : 0.5;
-  }
-
   &__logo {
     width            : 160px;
     height           : 160px;
@@ -328,6 +327,10 @@ main {
   &__logo:hover,
   &__logo:focus {
     background-color : @background-orange;
+  }
+
+  &__logo:active img {
+    opacity : 0.5;
   }
 
   &__list {
@@ -352,6 +355,12 @@ main {
   &__button:active {
     background-color : black;
     color            : #f7e184;
+  }
+
+  &__button_active {
+    background-color: black;
+    background-image: none;
+    color: #f7e184;
   }
 }
 
@@ -387,12 +396,17 @@ main {
 
   &__user-navigation a {
     color   : white;
-    opacity : 0.7;
+    color: rgba(255, 255, 255, 0.7);
   }
 
   &__user-navigation a:hover,
   &__user-navigation a:focus {
-    opacity : 1;
+    color: rgba(255, 255, 255);
+  }
+
+  &__user-navigation a:hover svg,
+  &__user-navigation a:focus svg {
+    opacity: 0.6;
   }
 
   &__user-navigation a:active {
@@ -564,6 +578,7 @@ main {
   &__new {
     .text-main(@gilroyextrabold, 14px, 24px, 0.7px);
     color : rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
   }
 
   &__compare {

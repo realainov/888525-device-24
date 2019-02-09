@@ -275,6 +275,13 @@ b {
 .site-header {
   background-image: linear-gradient(to bottom, white 40px, rgba(240, 197, 46, 0.5) 40px);
 }
+.site-header__user-navigation a:hover,
+.site-header__user-navigation a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+.site-header__user-navigation a:active {
+  opacity: 0.3;
+}
 .search-form {
   font-family: "Open Sans Light", Arial, sans-serif;
   font-size: 15px;
@@ -323,13 +330,6 @@ b {
   background-color: black;
   color: rgba(255, 255, 255, 0.3);
 }
-.user-navigation a:hover,
-.user-navigation a:focus {
-  opacity: 0.6;
-}
-.user-navigation a:active {
-  opacity: 0.3;
-}
 .site-navigation__catalog::after {
   content: "";
   background-image: url("../img/plus.svg");
@@ -339,11 +339,11 @@ b {
   height: 16px;
   display: inline-block;
 }
-.site-navigation a:hover,
-.site-navigation a:focus {
+.site-navigation a[href]:hover,
+.site-navigation a[href]:focus {
   opacity: 0.6;
 }
-.site-navigation a:active {
+.site-navigation a[href]:active {
   opacity: 0.3;
 }
 .site-navigation__inner-list {
@@ -398,9 +398,6 @@ b {
 main {
   margin-top: -18px;
 }
-.categories img:active {
-  opacity: 0.5;
-}
 .categories__logo {
   width: 160px;
   height: 160px;
@@ -409,6 +406,9 @@ main {
 .categories__logo:hover,
 .categories__logo:focus {
   background-color: #f0c52e;
+}
+.categories__logo:active img {
+  opacity: 0.5;
 }
 .categories__list {
   list-style: none;
@@ -432,6 +432,11 @@ main {
 }
 .services__button:active {
   background-color: black;
+  color: #f7e184;
+}
+.services__button_active {
+  background-color: black;
+  background-image: none;
   color: #f7e184;
 }
 .companies__list {
@@ -458,11 +463,15 @@ main {
 }
 .site-footer__user-navigation a {
   color: white;
-  opacity: 0.7;
+  color: rgba(255, 255, 255, 0.7);
 }
 .site-footer__user-navigation a:hover,
 .site-footer__user-navigation a:focus {
-  opacity: 1;
+  color: rgba(255, 255, 255);
+}
+.site-footer__user-navigation a:hover svg,
+.site-footer__user-navigation a:focus svg {
+  opacity: 0.6;
 }
 .site-footer__user-navigation a:active {
   opacity: 0.3;
@@ -615,6 +624,7 @@ main {
   line-height: 24px;
   letter-spacing: 0.7px;
   color: rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
 }
 .cards__compare {
   font-family: "Open Sans Light", Arial, sans-serif;
