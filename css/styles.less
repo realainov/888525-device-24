@@ -4,58 +4,58 @@
 // Fonts
 
 @font-face {
-  font-family : 'Open Sans Regular';
+  font-family : 'Open Sans';
   src         : url('../fonts/OpenSans-Regular.eot');
   src         : url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
   url('../fonts/OpenSans-Regular.woff') format('woff'),
   url('../fonts/OpenSans-Regular.ttf') format('truetype');
-  font-weight : normal;
+  font-weight : 400;
   font-style  : normal;
 }
 
 @font-face {
-  font-family : 'Open Sans Light';
+  font-family : 'Open Sans';
   src         : url('../fonts/OpenSans-Light.eot');
   src         : url('../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
   url('../fonts/OpenSans-Light.woff') format('woff'),
   url('../fonts/OpenSans-Light.ttf') format('truetype');
-  font-weight : normal;
+  font-weight : 300;
   font-style  : normal;
 }
 
 @font-face {
-  font-family : 'Gilroy Light';
+  font-family : 'Gilroy';
   src         : url('../fonts/Gilroy-Light.eot');
   src         : url('../fonts/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
   url('../fonts/Gilroy-Light.woff') format('woff'),
   url('../fonts/Gilroy-Light.ttf') format('truetype');
-  font-weight : normal;
+  font-weight : 300;
   font-style  : normal;
 }
 
 @font-face {
-  font-family : 'Gilroy Extra Bold';
+  font-family : 'Gilroy';
   src         : url('../fonts/Gilroy-ExtraBold.eot');
   src         : url('../fonts/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'),
   url('../fonts/Gilroy-ExtraBold.woff') format('woff'),
   url('../fonts/Gilroy-ExtraBold.ttf') format('truetype');
-  font-weight : normal;
+  font-weight : 800;
   font-style  : normal;
 }
 
 // Variables
 
-@background-orange--half : rgba(240, 197, 46, 0.5);
-@background-orange : rgba(240, 197, 46, 1);
-@opensanslight : "Open Sans Light", Arial, sans-serif;
-@opensans : "Open Sans Regular", Arial, sans-serif;
-@gilroylight : "Girloy Light", Arial, sans-serif;
-@gilroyextrabold : "Gilroy Extra Bold", Arial, sans-serif;
+@main-orange--half : rgba(240, 197, 46, 0.5);
+@main-orange : rgba(240, 197, 46, 1);
+@button-orange: #f7e184;
+@opensans : "Open Sans", Arial, sans-serif;
+@gilroy : "Girloy", Arial, sans-serif;
 
 // Mixins
 
-.text-main(@_font-family, @_font-size, @_line-height, @_letter-spacing) {
+.text-main(@_font-family, @_font-weight, @_font-size, @_line-height, @_letter-spacing) {
   font-family    : @_font-family;
+  font-weight: @_font-weight;
   font-size      : @_font-size;
   line-height    : @_line-height;
   letter-spacing : @_letter-spacing;
@@ -83,22 +83,17 @@ html {
   box-sizing : inherit;
 }
 
-body {
-  margin           : 0;
-  background-color : white;
-}
-
 a {
   text-decoration : none;
   color           : black;
 }
 
 p {
-  .text-main(@opensanslight, 15px, 30px, 0.15px);
+  .text-main(@opensans, 300, 15px, 30px, 0.15px);
   color : #464646;
 }
 
-b {
+b.title {
   font-weight : normal;
 }
 
@@ -115,27 +110,141 @@ b {
   overflow : hidden;
 }
 
-.button {
-  .text-main(@gilroyextrabold, 18px, 24px, 3.6px);
-  background-image : linear-gradient(to bottom, white 8px, @background-orange 8px, @background-orange 16px, white 16px);
-  text-transform   : uppercase;
+// Site Blocks
+
+// Site Header
+
+.site-header {
+
+  background-image : linear-gradient(to bottom, white 40px, @main-orange--half 40px);
+
+  &__user-navigation {
+
+    a:hover,
+    a:focus {
+      opacity: 0.6;
+    }
+
+    a:active {
+      opacity : 0.3;
+    }
+  }
 }
 
-.button:hover,
-.button:focus {
-  background-image : none;
-  background-color : @background-orange;
+// Site Main
+
+.site-main {
+
+  &__bread-list {
+
+    list-style : none;
+
+    a {
+      .text-main(@opensans, 300, 14px, 24px, 0.14px);
+      opacity : 0.3;
+    }
+
+    a[href]:hover,
+    a[href]:focus {
+      opacity : 0.6;
+    }
+
+    a[href]:active {
+      opacity : 0.1;
+    }
+  }
+
+  &__bread-item {
+    display : inline;
+  }
+
+  &__bread-item::after {
+    .icon("nav-arrow.svg", 4px, 7px);
+  }
+
+  &__bread-item:last-child::after {
+    content: none;
+  }
 }
 
-.button:active {
-  background-image : none;
-  background-color : @background-orange;
-  color            : rgba(0, 0, 0, 0.3);
+// Site Footer
+
+.site-footer {
+
+  background-color : #464646;
+
+  &__user-navigation a {
+    color : white;
+    color : rgba(255, 255, 255, 0.7);
+  }
+
+  &__user-navigation a:hover,
+  &__user-navigation a:focus {
+    color : rgb(255, 255, 255);
+  }
+
+  &__user-navigation a:hover svg,
+  &__user-navigation a:focus svg {
+    opacity : 0.6;
+  }
+
+  &__user-navigation a:active {
+    opacity : 0.3;
+  }
+
+  &__site-navigation a {
+    color : white;
+  }
+
+  address {
+    .text-main(@opensans, 300, 15px, 30px, 0.15px);
+    color      : white;
+    font-style : normal;
+  }
+
+  .main-logo {
+    fill : #ffc600;
+  }
+
+  .phone {
+    .text-main(@opensans, 300, 15px, 30px, 0.15px);
+    color : white;
+  }
+
+  &__social-list {
+    list-style : none;
+
+    a {
+      opacity : 0.3;
+    }
+
+    a:hover,
+    a:focus {
+      opacity : 0.6;
+    }
+
+    a:active {
+      opacity : 0.1;
+    }
+  }
+
+  .html-academy-logo:hover,
+  .html-academy-logo:focus {
+    opacity : 0.6;
+  }
+
+  .html-academy-logo:active {
+    opacity : 0.3;
+  }
+
+  svg {
+    fill : #ffc600;
+  }
 }
 
-.title {
-  .text-main(@gilroyextrabold, 47px, 56px, 0.47px);
-}
+// Navigations
+
+// User Navigation
 
 .user-navigation,
 .site-navigation__list,
@@ -145,17 +254,77 @@ b {
 
 .user-navigation {
 
-  .text-main(@opensanslight, 15px, 30px, 0.2);
+  .text-main(@opensans, 300, 15px, 30px, 0.2px);
 
   &__quit {
     opacity : 0.3;
   }
 }
 
+// Site Navigation
+
 .site-navigation {
-  .text-main(@gilroyextrabold, 18px, 24px, 3.6px);
+
+  .text-main(@gilroy, 800, 18px, 24px, 3.6px);
   text-transform : uppercase;
+
+  &__catalog::after {
+    .icon("plus.svg", 16px, 16px);
+  }
+
+  a[href]:hover,
+  a[href]:focus {
+    opacity : 0.6;
+  }
+
+  a[href]:active {
+    opacity : 0.3;
+  }
+
+  &__inner-list {
+    display        : none;
+    .text-main(@opensans, 300, 15px, 36px, 0.15px);
+    text-transform : initial;
+  }
+
+  &__catalog:hover + &__inner-list,
+  &__catalog:focus + &__inner-list {
+    display : block;
+  }
+
+  &__inner-list:hover,
+  &__inner-list:focus {
+    display : block;
+  }
 }
+
+// Button
+
+.button {
+  .text-main(@gilroy, 800, 18px, 24px, 3.6px);
+  background-image : linear-gradient(to bottom, white 8px, @main-orange 8px, @main-orange 16px, white 16px);
+  text-transform   : uppercase;
+}
+
+.button:hover,
+.button:focus {
+  background-image : none;
+  background-color : @main-orange;
+}
+
+.button:active {
+  background-image : none;
+  background-color : @main-orange;
+  color            : rgba(0, 0, 0, 0.3);
+}
+
+// Title
+
+.title {
+  .text-main(@gilroy, 800, 47px, 56px, 0.47px);
+}
+
+// Main Logo
 
 .main-logo[href]:hover,
 .main-logo[href]:focus {
@@ -166,37 +335,7 @@ b {
   opacity : 0.3;
 }
 
-.modal__close-button {
-  border           : 0;
-  background-color : transparent;
-  opacity          : 0.5;
-}
-
-.modal__close-button:hover,
-.modal__close-button:focus {
-  opacity : 1;
-}
-
-.modal__close-button:active {
-  opacity : 0.3;
-}
-
-.site-header {
-
-  background-image : linear-gradient(to bottom, white 40px, @background-orange--half 40px);
-
-  &__user-navigation {
-
-    a:hover,
-    a:focus {
-      color : rgba(0, 0, 0, 0.6)
-    }
-
-    a:active {
-      opacity : 0.3;
-    }
-  }
-}
+// Search Form
 
 .search-form {
 
@@ -205,7 +344,7 @@ b {
   }
 
   &__field {
-    .text-main(@opensanslight, 15px, 30px, 0.15px);
+    .text-main(@opensans, 300, 15px, 30px, 0.15px);
     color            : rgba(0, 0, 0, 0.3);
     background-color : transparent;
     border           : none;
@@ -246,37 +385,9 @@ b {
   }
 }
 
-.site-navigation {
+// Site Components
 
-  &__catalog::after {
-    .icon("plus.svg", 16px, 16px);
-  }
-
-  a[href]:hover,
-  a[href]:focus {
-    opacity : 0.6;
-  }
-
-  a[href]:active {
-    opacity : 0.3;
-  }
-
-  &__inner-list {
-    display        : none;
-    .text-main(@opensanslight, 15px, 36px, 0.15px);
-    text-transform : initial;
-  }
-
-  &__catalog:hover + &__inner-list,
-  &__catalog:focus + &__inner-list {
-    display : block;
-  }
-
-  &__inner-list:hover,
-  &__inner-list:focus {
-    display : block;
-  }
-}
+// Goods
 
 .goods {
 
@@ -289,23 +400,24 @@ b {
   }
 
   &__item {
-    background-image : linear-gradient(to bottom, @background-orange--half 40px, white 40px);
+    background-image : linear-gradient(to bottom, @main-orange--half 40px, white 40px);
   }
 
   &__item::before {
     content           : '0' counter(num);
     counter-increment : num;
-    .text-main(@gilroyextrabold, 179px, 179px, 1.79px);
+    .text-main(@gilroy, 800, 179px, 179px, 1.79px);
     color             : black;
   }
 
   th {
-    .text-main(@opensanslight, 13px, 20px, 0.13px);
+    .text-main(@opensans, 300, 13px, 20px, 0.13px);
     font-weight : normal;
+    color: #464646;
   }
 
   td {
-    .text-main(@gilroylight, 36px, 48px, 0.36px);
+    .text-main(@gilroy, 300, 36px, 48px, 0.36px);
   }
 }
 
@@ -313,17 +425,19 @@ main {
   margin-top : -18px; //Временно
 }
 
+// Categories
+
 .categories {
 
   &__logo {
     width            : 160px;
     height           : 160px;
-    background-color : @background-orange--half;
+    background-color : @main-orange--half;
   }
 
   &__logo:hover,
   &__logo:focus {
-    background-color : @background-orange;
+    background-color : @main-orange;
   }
 
   &__logo:active img {
@@ -332,9 +446,11 @@ main {
 
   &__list {
     list-style : none;
-    .text-main(@gilroyextrabold, 18px, 24px, 0.18px);
+    .text-main(@gilroy, 800, 18px, 24px, 0.18px);
   }
 }
+
+// Services
 
 .services {
 
@@ -342,7 +458,7 @@ main {
 
   &__button-list {
     list-style : none;
-    .text-main(@gilroyextrabold, 18px, 24px, 3.6px);
+    .text-main(@gilroy, 800, 18px, 24px, 3.6px);
   }
 
   &__features-list {
@@ -351,15 +467,17 @@ main {
 
   &__button:active {
     background-color : black;
-    color            : #f7e184;
+    color            : @button-orange;
   }
 
   &__button_active {
     background-color : black;
     background-image : none;
-    color            : #f7e184;
+    color            : @button-orange;
   }
 }
+
+// Companies
 
 .companies {
 
@@ -379,108 +497,22 @@ main {
   }
 }
 
+// About Us
+
 .about-us {
 
   &__list {
-    .text-main(@gilroyextrabold, 16px, 40px, 0);
+    .text-main(@gilroy, 800, 16px, 40px, 0);
     list-style-type : circle;
   }
 }
 
-.site-footer {
-
-  background-color : #464646;
-
-  &__user-navigation a {
-    color : white;
-    color : rgba(255, 255, 255, 0.7);
-  }
-
-  &__user-navigation a:hover,
-  &__user-navigation a:focus {
-    color : rgba(255, 255, 255);
-  }
-
-  &__user-navigation a:hover svg,
-  &__user-navigation a:focus svg {
-    opacity : 0.6;
-  }
-
-  &__user-navigation a:active {
-    opacity : 0.3;
-  }
-
-  &__site-navigation a {
-    color : white;
-  }
-
-  address {
-    .text-main(@opensanslight, 15px, 30px, 0.15px);
-    color      : white;
-    font-style : normal;
-  }
-
-  .main-logo {
-    fill : #ffc600;
-  }
-
-  .phone {
-    .text-main(@opensanslight, 15px, 30px, 0.15px);
-    color : white;
-  }
-
-  &__social-list {
-    list-style : none;
-
-    a {
-      opacity : 0.3;
-    }
-
-    a:hover,
-    a:focus {
-      opacity : 0.6;
-    }
-
-    a:active {
-      opacity : 0.1;
-    }
-  }
-
-  .html-academy-logo:hover,
-  .html-academy-logo:focus {
-    opacity : 0.6;
-  }
-
-  .html-academy-logo:active {
-    opacity : 0.3;
-  }
-
-  svg {
-    fill : #ffc600;
-  }
-}
-
-.site-main__bread {
-
-  a {
-    .text-main(@opensanslight, 14px, 24px, 0.14px);
-    opacity : 0.3;
-  }
-
-  a[href]:hover,
-  a[href]:focus {
-    opacity : 0.6;
-  }
-
-  a[href]:active {
-    opacity : 0.1;
-  }
-}
+// Filters
 
 .filters {
 
   h3 {
-    .text-main(@gilroyextrabold, 16px, 24px, 3.2px);
+    .text-main(@gilroy, 800, 16px, 24px, 3.2px);
     text-transform : uppercase;
   }
 
@@ -491,7 +523,7 @@ main {
     }
 
     legend {
-      .text-main(@gilroyextrabold, 18px, 24px, 0.18px);
+      .text-main(@gilroy, 800, 18px, 24px, 0.18px);
     }
   }
 
@@ -501,7 +533,7 @@ main {
   }
 
   label {
-    .text-main(@opensanslight, 14px, 40px, 0.14px);
+    .text-main(@opensans, 300, 14px, 40px, 0.14px);
   }
 
   button {
@@ -509,15 +541,17 @@ main {
   }
 }
 
+// Sorting
+
 .sorting {
 
   h3 {
-    .text-main(@gilroyextrabold, 16px, 24px, 3.2px);
+    .text-main(@gilroy, 800, 16px, 24px, 3.2px);
     text-transform : uppercase;
   }
 
   a {
-    .text-main(@opensans, 14px, 18px, 0);
+    .text-main(@opensans, 400, 14px, 18px, 0);
     color : black;
   }
 
@@ -558,6 +592,8 @@ main {
   }
 }
 
+// Cards
+
 .cards {
 
   &__list {
@@ -565,22 +601,22 @@ main {
   }
 
   &__name {
-    .text-main(@gilroyextrabold, 18px, 24px, 0.18px);
+    .text-main(@gilroy, 800, 18px, 24px, 0.18px);
   }
 
   &__price {
-    .text-main(@gilroylight, 16px, 24px, 0.16px);
+    .text-main(@gilroy, 300, 16px, 24px, 0.16px);
     color : #464646;
   }
 
   &__new {
-    .text-main(@gilroyextrabold, 14px, 24px, 0.7px);
+    .text-main(@gilroy, 800, 14px, 24px, 0.7px);
     color          : rgba(0, 0, 0, 0.2);
     text-transform : uppercase;
   }
 
   &__compare {
-    .text-main(@opensanslight, 13px, 36px, 0.13px);
+    .text-main(@opensans, 300, 13px, 36px, 0.13px);
     opacity : 0.5;
   }
 
@@ -595,7 +631,7 @@ main {
 
   &__navigation-list {
     list-style : none;
-    .text-main(@gilroyextrabold, 16px, 24px, 3.2px);
+    .text-main(@gilroy, 800, 16px, 24px, 3.2px);
   }
 
   &__navigation-item a[href] {
@@ -636,16 +672,37 @@ main {
   }
 }
 
+// Modal Windows
+
+// Modal Close
+
+.modal__close-button {
+  border           : 0;
+  background-color : transparent;
+  opacity          : 0.5;
+}
+
+.modal__close-button:hover,
+.modal__close-button:focus {
+  opacity : 1;
+}
+
+.modal__close-button:active {
+  opacity : 0.3;
+}
+
+// Modal Contact Us
+
 .modal-contact-us {
 
   &__form {
     label {
-      .text-main(@gilroyextrabold, 18px, 24px, 0);
+      .text-main(@gilroy, 800, 18px, 24px, 0);
     }
 
     input,
     textarea {
-      .text-main(@opensans, 14px, 18px, 0);
+      .text-main(@opensans, 400, 14px, 18px, 0);
       color            : rgba(70, 70, 70, 0.4);
       background-color : #f2f2f2;
       border           : none;

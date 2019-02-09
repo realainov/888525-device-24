@@ -76,19 +76,11 @@
 </header>
 <main class="site-main">
   <h2 class="site-main__title title">Моноподы для селфи</h2>
-  <div class="site-main__bread">
-    <a href="index.html">Главная</a>
-    <svg xmlns="http://www.w3.org/2000/svg" width="4" height="7">
-      <path
-        d="M3.83 3.132L.861.144a.5.5 0 0 0-.713 0 .508.508 0 0 0 0 .718l2.611 2.629L.148 6.12a.51.51 0 0 0 0 .72.5.5 0 0 0 .713 0L3.83 3.852a.51.51 0 0 0 .147-.36.507.507 0 0 0-.147-.36z"/>
-    </svg>
-    <a href="#">Каталог товаров</a>
-    <svg xmlns="http://www.w3.org/2000/svg" width="4" height="7">
-      <path
-        d="M3.83 3.132L.861.144a.5.5 0 0 0-.713 0 .508.508 0 0 0 0 .718l2.611 2.629L.148 6.12a.51.51 0 0 0 0 .72.5.5 0 0 0 .713 0L3.83 3.852a.51.51 0 0 0 .147-.36.507.507 0 0 0-.147-.36z"/>
-    </svg>
-    <a>Моноподы для селфи</a>
-  </div>
+  <ul class="site-main__bread-list">
+    <li class="site-main__bread-item"><a href="index.html">Главная</a></li>
+    <li class="site-main__bread-item"><a href="#">Каталог товаров</a></li>
+    <li class="site-main__bread-item"><a>Моноподы для селфи</a></li>
+  </ul>
   <section class="filters">
     <h3>Фильтр:</h3>
     <form class="filters__form" action="https://echo.htmlacademy.ru" method="get">
@@ -185,7 +177,7 @@
         <a class="cards__button button" href="#">В корзину</a>
         <a class="cards__compare" href="#">Добавить к сравнению</a>
       </li>
-      <li class="cards__item">
+      <li class="cards__item cards__item_new">
         <img src="img/item-4.jpg" width="360" height="380" alt="Изображение селфи-палки «Следуй за мной»">
         <span class="cards__new">new</span>
         <a class="cards__name" href="#">Селфи-палка «Следуй за мной»</a>

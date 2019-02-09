@@ -145,31 +145,31 @@ template {
   display: none;
 }
 @font-face {
-  font-family: 'Open Sans Regular';
+  font-family: 'Open Sans';
   src: url('../fonts/OpenSans-Regular.eot');
   src: url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Regular.woff') format('woff'), url('../fonts/OpenSans-Regular.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Open Sans Light';
+  font-family: 'Open Sans';
   src: url('../fonts/OpenSans-Light.eot');
   src: url('../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Light.woff') format('woff'), url('../fonts/OpenSans-Light.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Gilroy Light';
+  font-family: 'Gilroy';
   src: url('../fonts/Gilroy-Light.eot');
   src: url('../fonts/Gilroy-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Gilroy-Light.woff') format('woff'), url('../fonts/Gilroy-Light.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Gilroy Extra Bold';
+  font-family: 'Gilroy';
   src: url('../fonts/Gilroy-ExtraBold.eot');
   src: url('../fonts/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'), url('../fonts/Gilroy-ExtraBold.woff') format('woff'), url('../fonts/Gilroy-ExtraBold.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 800;
   font-style: normal;
 }
 html {
@@ -180,22 +180,19 @@ html {
 *::after {
   box-sizing: inherit;
 }
-body {
-  margin: 0;
-  background-color: white;
-}
 a {
   text-decoration: none;
   color: black;
 }
 p {
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 15px;
   line-height: 30px;
   letter-spacing: 0.15px;
   color: #464646;
 }
-b {
+b.title {
   font-weight: normal;
 }
 .visually-hidden {
@@ -208,8 +205,172 @@ b {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.site-header {
+  background-image: linear-gradient(to bottom, white 40px, rgba(240, 197, 46, 0.5) 40px);
+}
+.site-header__user-navigation a:hover,
+.site-header__user-navigation a:focus {
+  opacity: 0.6;
+}
+.site-header__user-navigation a:active {
+  opacity: 0.3;
+}
+.site-main__bread-list {
+  list-style: none;
+}
+.site-main__bread-list a {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.14px;
+  opacity: 0.3;
+}
+.site-main__bread-list a[href]:hover,
+.site-main__bread-list a[href]:focus {
+  opacity: 0.6;
+}
+.site-main__bread-list a[href]:active {
+  opacity: 0.1;
+}
+.site-main__bread-item {
+  display: inline;
+}
+.site-main__bread-item::after {
+  content: "";
+  background-image: url("../img/nav-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 4px;
+  height: 7px;
+  display: inline-block;
+}
+.site-main__bread-item:last-child::after {
+  content: none;
+}
+.site-footer {
+  background-color: #464646;
+}
+.site-footer__user-navigation a {
+  color: white;
+  color: rgba(255, 255, 255, 0.7);
+}
+.site-footer__user-navigation a:hover,
+.site-footer__user-navigation a:focus {
+  color: #ffffff;
+}
+.site-footer__user-navigation a:hover svg,
+.site-footer__user-navigation a:focus svg {
+  opacity: 0.6;
+}
+.site-footer__user-navigation a:active {
+  opacity: 0.3;
+}
+.site-footer__site-navigation a {
+  color: white;
+}
+.site-footer address {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.15px;
+  color: white;
+  font-style: normal;
+}
+.site-footer .main-logo {
+  fill: #ffc600;
+}
+.site-footer .phone {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.15px;
+  color: white;
+}
+.site-footer__social-list {
+  list-style: none;
+}
+.site-footer__social-list a {
+  opacity: 0.3;
+}
+.site-footer__social-list a:hover,
+.site-footer__social-list a:focus {
+  opacity: 0.6;
+}
+.site-footer__social-list a:active {
+  opacity: 0.1;
+}
+.site-footer .html-academy-logo:hover,
+.site-footer .html-academy-logo:focus {
+  opacity: 0.6;
+}
+.site-footer .html-academy-logo:active {
+  opacity: 0.3;
+}
+.site-footer svg {
+  fill: #ffc600;
+}
+.user-navigation,
+.site-navigation__list,
+.site-navigation__inner-list {
+  list-style: none;
+}
+.user-navigation {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+}
+.user-navigation__quit {
+  opacity: 0.3;
+}
+.site-navigation {
+  font-family: "Girloy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+}
+.site-navigation__catalog::after {
+  content: "";
+  background-image: url("../img/plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+.site-navigation a[href]:hover,
+.site-navigation a[href]:focus {
+  opacity: 0.6;
+}
+.site-navigation a[href]:active {
+  opacity: 0.3;
+}
+.site-navigation__inner-list {
+  display: none;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 36px;
+  letter-spacing: 0.15px;
+  text-transform: initial;
+}
+.site-navigation__catalog:hover + .site-navigation__inner-list,
+.site-navigation__catalog:focus + .site-navigation__inner-list {
+  display: block;
+}
+.site-navigation__inner-list:hover,
+.site-navigation__inner-list:focus {
+  display: block;
+}
 .button {
-  font-family: "Gilroy Extra Bold", Arial, sans-serif;
+  font-family: "Girloy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 3.6px;
@@ -227,59 +388,17 @@ b {
   color: rgba(0, 0, 0, 0.3);
 }
 .title {
-  font-family: "Gilroy Extra Bold", Arial, sans-serif;
+  font-family: "Girloy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 47px;
   line-height: 56px;
   letter-spacing: 0.47px;
-}
-.user-navigation,
-.site-navigation__list,
-.site-navigation__inner-list {
-  list-style: none;
-}
-.user-navigation {
-  font-family: "Open Sans Light", Arial, sans-serif;
-  font-size: 15px;
-  line-height: 30px;
-  letter-spacing: 0.2;
-}
-.user-navigation__quit {
-  opacity: 0.3;
-}
-.site-navigation {
-  font-family: "Gilroy Extra Bold", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 3.6px;
-  text-transform: uppercase;
 }
 .main-logo[href]:hover,
 .main-logo[href]:focus {
   opacity: 0.6;
 }
 .main-logo[href]:active {
-  opacity: 0.3;
-}
-.modal__close-button {
-  border: 0;
-  background-color: transparent;
-  opacity: 0.5;
-}
-.modal__close-button:hover,
-.modal__close-button:focus {
-  opacity: 1;
-}
-.modal__close-button:active {
-  opacity: 0.3;
-}
-.site-header {
-  background-image: linear-gradient(to bottom, white 40px, rgba(240, 197, 46, 0.5) 40px);
-}
-.site-header__user-navigation a:hover,
-.site-header__user-navigation a:focus {
-  color: rgba(0, 0, 0, 0.6);
-}
-.site-header__user-navigation a:active {
   opacity: 0.3;
 }
 .search-form::before {
@@ -292,7 +411,8 @@ b {
   display: inline-block;
 }
 .search-form__field {
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 15px;
   line-height: 30px;
   letter-spacing: 0.15px;
@@ -328,38 +448,6 @@ b {
   background-color: black;
   color: rgba(255, 255, 255, 0.3);
 }
-.site-navigation__catalog::after {
-  content: "";
-  background-image: url("../img/plus.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 16px;
-  height: 16px;
-  display: inline-block;
-}
-.site-navigation a[href]:hover,
-.site-navigation a[href]:focus {
-  opacity: 0.6;
-}
-.site-navigation a[href]:active {
-  opacity: 0.3;
-}
-.site-navigation__inner-list {
-  display: none;
-  font-family: "Open Sans Light", Arial, sans-serif;
-  font-size: 15px;
-  line-height: 36px;
-  letter-spacing: 0.15px;
-  text-transform: initial;
-}
-.site-navigation__catalog:hover + .site-navigation__inner-list,
-.site-navigation__catalog:focus + .site-navigation__inner-list {
-  display: block;
-}
-.site-navigation__inner-list:hover,
-.site-navigation__inner-list:focus {
-  display: block;
-}
 .goods {
   margin: 0;
 }
@@ -374,21 +462,25 @@ b {
 .goods__item::before {
   content: '0' counter(num);
   counter-increment: num;
-  font-family: "Gilroy Extra Bold", Arial, sans-serif;
+  font-family: "Girloy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 179px;
   line-height: 179px;
   letter-spacing: 1.79px;
   color: black;
 }
 .goods th {
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 13px;
   line-height: 20px;
   letter-spacing: 0.13px;
   font-weight: normal;
+  color: #464646;
 }
 .goods td {
-  font-family: "Girloy Light", Arial, sans-serif;
+  font-family: "Girloy", Arial, sans-serif;
+  font-weight: 300;
   font-size: 36px;
   line-height: 48px;
   letter-spacing: 0.36px;
@@ -410,7 +502,8 @@ main {
 }
 .categories__list {
   list-style: none;
-  font-family: "Gilroy Extra Bold", Arial, sans-serif;
+  font-family: "Girloy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.18px;
@@ -420,7 +513,8 @@ main {
 }
 .services__button-list {
   list-style: none;
-  font-family: "Gilroy Extra Bold", Arial, sans-serif;
+  font-family: "Girloy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 3.6px;
@@ -450,90 +544,16 @@ main {
   opacity: 1;
 }
 .about-us__list {
-  font-family: "Gilroy Extra Bold", Arial, sans-serif;
+  font-family: "Girloy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 16px;
   line-height: 40px;
   letter-spacing: 0;
   list-style-type: circle;
 }
-.site-footer {
-  background-color: #464646;
-}
-.site-footer__user-navigation a {
-  color: white;
-  color: rgba(255, 255, 255, 0.7);
-}
-.site-footer__user-navigation a:hover,
-.site-footer__user-navigation a:focus {
-  color: rgba(255, 255, 255);
-}
-.site-footer__user-navigation a:hover svg,
-.site-footer__user-navigation a:focus svg {
-  opacity: 0.6;
-}
-.site-footer__user-navigation a:active {
-  opacity: 0.3;
-}
-.site-footer__site-navigation a {
-  color: white;
-}
-.site-footer address {
-  font-family: "Open Sans Light", Arial, sans-serif;
-  font-size: 15px;
-  line-height: 30px;
-  letter-spacing: 0.15px;
-  color: white;
-  font-style: normal;
-}
-.site-footer .main-logo {
-  fill: #ffc600;
-}
-.site-footer .phone {
-  font-family: "Open Sans Light", Arial, sans-serif;
-  font-size: 15px;
-  line-height: 30px;
-  letter-spacing: 0.15px;
-  color: white;
-}
-.site-footer__social-list {
-  list-style: none;
-}
-.site-footer__social-list a {
-  opacity: 0.3;
-}
-.site-footer__social-list a:hover,
-.site-footer__social-list a:focus {
-  opacity: 0.6;
-}
-.site-footer__social-list a:active {
-  opacity: 0.1;
-}
-.site-footer .html-academy-logo:hover,
-.site-footer .html-academy-logo:focus {
-  opacity: 0.6;
-}
-.site-footer .html-academy-logo:active {
-  opacity: 0.3;
-}
-.site-footer svg {
-  fill: #ffc600;
-}
-.site-main__bread a {
-  font-family: "Open Sans Light", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.14px;
-  opacity: 0.3;
-}
-.site-main__bread a[href]:hover,
-.site-main__bread a[href]:focus {
-  opacity: 0.6;
-}
-.site-main__bread a[href]:active {
-  opacity: 0.1;
-}
 .filters h3 {
-  font-family: "Gilroy Extra Bold", Arial, sans-serif;
+  font-family: "Girloy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 3.2px;
@@ -543,7 +563,8 @@ main {
   border: none;
 }
 .filters__form legend {
-  font-family: "Gilroy Extra Bold", Arial, sans-serif;
+  font-family: "Girloy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.18px;
@@ -553,7 +574,8 @@ main {
   list-style: none;
 }
 .filters label {
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 14px;
   line-height: 40px;
   letter-spacing: 0.14px;
@@ -562,14 +584,16 @@ main {
   border: none;
 }
 .sorting h3 {
-  font-family: "Gilroy Extra Bold", Arial, sans-serif;
+  font-family: "Girloy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 3.2px;
   text-transform: uppercase;
 }
 .sorting a {
-  font-family: "Open Sans Regular", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0;
@@ -605,20 +629,23 @@ main {
   list-style: none;
 }
 .cards__name {
-  font-family: "Gilroy Extra Bold", Arial, sans-serif;
+  font-family: "Girloy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.18px;
 }
 .cards__price {
-  font-family: "Girloy Light", Arial, sans-serif;
+  font-family: "Girloy", Arial, sans-serif;
+  font-weight: 300;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.16px;
   color: #464646;
 }
 .cards__new {
-  font-family: "Gilroy Extra Bold", Arial, sans-serif;
+  font-family: "Girloy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.7px;
@@ -626,7 +653,8 @@ main {
   text-transform: uppercase;
 }
 .cards__compare {
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 13px;
   line-height: 36px;
   letter-spacing: 0.13px;
@@ -641,7 +669,8 @@ main {
 }
 .cards__navigation-list {
   list-style: none;
-  font-family: "Gilroy Extra Bold", Arial, sans-serif;
+  font-family: "Girloy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 3.2px;
@@ -676,15 +705,29 @@ main {
 .cards__navigation-item:last-child a:active {
   opacity: 0.3;
 }
+.modal__close-button {
+  border: 0;
+  background-color: transparent;
+  opacity: 0.5;
+}
+.modal__close-button:hover,
+.modal__close-button:focus {
+  opacity: 1;
+}
+.modal__close-button:active {
+  opacity: 0.3;
+}
 .modal-contact-us__form label {
-  font-family: "Gilroy Extra Bold", Arial, sans-serif;
+  font-family: "Girloy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0;
 }
 .modal-contact-us__form input,
 .modal-contact-us__form textarea {
-  font-family: "Open Sans Regular", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0;
