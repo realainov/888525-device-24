@@ -118,7 +118,7 @@ b {
 .button {
   .text-main(@gilroyextrabold, 18px, 24px, 3.6px);
   background-image : linear-gradient(to bottom, white 8px, @background-orange 8px, @background-orange 16px, white 16px);
-  text-transform: uppercase;
+  text-transform   : uppercase;
 }
 
 .button:hover,
@@ -189,7 +189,7 @@ b {
 
     a:hover,
     a:focus {
-      color: rgba(0, 0, 0, 0.6)
+      color : rgba(0, 0, 0, 0.6)
     }
 
     a:active {
@@ -200,13 +200,12 @@ b {
 
 .search-form {
 
-  .text-main(@opensanslight, 15px, 30px, 0.15px);
-
   &::before {
     .icon("search.svg", 16px, 16px);
   }
 
   &__field {
+    .text-main(@opensanslight, 15px, 30px, 0.15px);
     color            : rgba(0, 0, 0, 0.3);
     background-color : transparent;
     border           : none;
@@ -246,8 +245,6 @@ b {
     color            : rgba(255, 255, 255, 0.3);
   }
 }
-
-
 
 .site-navigation {
 
@@ -344,7 +341,7 @@ main {
   background-image : linear-gradient(to bottom, white 100px, #e5e5e5 100px);
 
   &__button-list {
-    list-style     : none;
+    list-style : none;
     .text-main(@gilroyextrabold, 18px, 24px, 3.6px);
   }
 
@@ -358,9 +355,9 @@ main {
   }
 
   &__button_active {
-    background-color: black;
-    background-image: none;
-    color: #f7e184;
+    background-color : black;
+    background-image : none;
+    color            : #f7e184;
   }
 }
 
@@ -395,18 +392,18 @@ main {
   background-color : #464646;
 
   &__user-navigation a {
-    color   : white;
-    color: rgba(255, 255, 255, 0.7);
+    color : white;
+    color : rgba(255, 255, 255, 0.7);
   }
 
   &__user-navigation a:hover,
   &__user-navigation a:focus {
-    color: rgba(255, 255, 255);
+    color : rgba(255, 255, 255);
   }
 
   &__user-navigation a:hover svg,
   &__user-navigation a:focus svg {
-    opacity: 0.6;
+    opacity : 0.6;
   }
 
   &__user-navigation a:active {
@@ -484,7 +481,7 @@ main {
 
   h3 {
     .text-main(@gilroyextrabold, 16px, 24px, 3.2px);
-    text-transform: uppercase;
+    text-transform : uppercase;
   }
 
   &__form {
@@ -498,7 +495,8 @@ main {
     }
   }
 
-  &__color-list {
+  &__color-list,
+  &__bluetooth-list {
     list-style : none;
   }
 
@@ -515,7 +513,7 @@ main {
 
   h3 {
     .text-main(@gilroyextrabold, 16px, 24px, 3.2px);
-    text-transform: uppercase;
+    text-transform : uppercase;
   }
 
   a {
@@ -577,8 +575,8 @@ main {
 
   &__new {
     .text-main(@gilroyextrabold, 14px, 24px, 0.7px);
-    color : rgba(0, 0, 0, 0.2);
-    text-transform: uppercase;
+    color          : rgba(0, 0, 0, 0.2);
+    text-transform : uppercase;
   }
 
   &__compare {

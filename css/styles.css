@@ -282,12 +282,6 @@ b {
 .site-header__user-navigation a:active {
   opacity: 0.3;
 }
-.search-form {
-  font-family: "Open Sans Light", Arial, sans-serif;
-  font-size: 15px;
-  line-height: 30px;
-  letter-spacing: 0.15px;
-}
 .search-form::before {
   content: "";
   background-image: url("../img/search.svg");
@@ -298,6 +292,10 @@ b {
   display: inline-block;
 }
 .search-form__field {
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.15px;
   color: rgba(0, 0, 0, 0.3);
   background-color: transparent;
   border: none;
@@ -550,7 +548,8 @@ main {
   line-height: 24px;
   letter-spacing: 0.18px;
 }
-.filters__color-list {
+.filters__color-list,
+.filters__bluetooth-list {
   list-style: none;
 }
 .filters label {
