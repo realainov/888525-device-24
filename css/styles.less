@@ -4,43 +4,35 @@
 // Fonts
 
 @font-face {
-  font-family : 'Open Sans';
-  src         : url('../fonts/OpenSans-Regular.eot');
-  src         : url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/OpenSans-Regular.woff') format('woff'),
-  url('../fonts/OpenSans-Regular.ttf') format('truetype');
-  font-weight : 400;
-  font-style  : normal;
+  font-family: 'Gilroy';
+  src: url('../fonts/gilroy-extrabold.woff2') format('woff2'),
+  url('../fonts/gilroy-extrabold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
 }
 
 @font-face {
-  font-family : 'Open Sans';
-  src         : url('../fonts/OpenSans-Light.eot');
-  src         : url('../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/OpenSans-Light.woff') format('woff'),
-  url('../fonts/OpenSans-Light.ttf') format('truetype');
-  font-weight : 300;
-  font-style  : normal;
+  font-family: 'Gilroy';
+  src: url('../fonts/gilroy-light.woff2') format('woff2'),
+  url('../fonts/gilroy-light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-  font-family : 'Gilroy';
-  src         : url('../fonts/Gilroy-Light.eot');
-  src         : url('../fonts/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/Gilroy-Light.woff') format('woff'),
-  url('../fonts/Gilroy-Light.ttf') format('truetype');
-  font-weight : 300;
-  font-style  : normal;
+  font-family: 'Open Sans';
+  src: url('../fonts/opensans-light.woff2') format('woff2'),
+  url('../fonts/opensans-light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-  font-family : 'Gilroy';
-  src         : url('../fonts/Gilroy-ExtraBold.eot');
-  src         : url('../fonts/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/Gilroy-ExtraBold.woff') format('woff'),
-  url('../fonts/Gilroy-ExtraBold.ttf') format('truetype');
-  font-weight : 800;
-  font-style  : normal;
+  font-family: 'Open Sans';
+  src: url('../fonts/opensans-regular.woff2') format('woff2'),
+  url('../fonts/opensans-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 
 // Variables
@@ -91,10 +83,6 @@ a {
 p {
   .text-main(@opensans, 300, 15px, 30px, 0.15px);
   color : #464646;
-}
-
-b.title {
-  font-weight : normal;
 }
 
 // Visually Hidden
@@ -412,7 +400,6 @@ b.title {
 
   th {
     .text-main(@opensans, 300, 13px, 20px, 0.13px);
-    font-weight : normal;
     color       : #464646;
   }
 
