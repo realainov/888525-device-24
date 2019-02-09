@@ -321,7 +321,7 @@ p {
   opacity: 0.3;
 }
 .site-navigation {
-  font-family: "Girloy", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
@@ -362,7 +362,7 @@ p {
   display: block;
 }
 .button {
-  font-family: "Girloy", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
@@ -381,7 +381,7 @@ p {
   color: rgba(0, 0, 0, 0.3);
 }
 .title {
-  font-family: "Girloy", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 56px;
@@ -455,7 +455,7 @@ p {
 .goods__item::before {
   content: '0' counter(num);
   counter-increment: num;
-  font-family: "Girloy", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 179px;
   line-height: 179px;
@@ -471,7 +471,7 @@ p {
   color: #464646;
 }
 .goods td {
-  font-family: "Girloy", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-weight: 300;
   font-size: 36px;
   line-height: 48px;
@@ -494,7 +494,7 @@ main {
 }
 .categories__list {
   list-style: none;
-  font-family: "Girloy", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
@@ -505,7 +505,7 @@ main {
 }
 .services__button-list {
   list-style: none;
-  font-family: "Girloy", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
@@ -536,7 +536,7 @@ main {
   opacity: 1;
 }
 .about-us__list {
-  font-family: "Girloy", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 40px;
@@ -544,7 +544,7 @@ main {
   list-style-type: circle;
 }
 .filters h3 {
-  font-family: "Girloy", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 24px;
@@ -555,7 +555,7 @@ main {
   border: none;
 }
 .filters__form legend {
-  font-family: "Girloy", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
@@ -576,7 +576,7 @@ main {
   border: none;
 }
 .sorting h3 {
-  font-family: "Girloy", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 24px;
@@ -621,14 +621,14 @@ main {
   list-style: none;
 }
 .cards__name {
-  font-family: "Girloy", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.18px;
 }
 .cards__price {
-  font-family: "Girloy", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
@@ -636,7 +636,7 @@ main {
   color: #464646;
 }
 .cards__new {
-  font-family: "Girloy", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 14px;
   line-height: 24px;
@@ -661,7 +661,7 @@ main {
 }
 .cards__navigation-list {
   list-style: none;
-  font-family: "Girloy", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 24px;
@@ -710,7 +710,7 @@ main {
   opacity: 0.3;
 }
 .modal-contact-us__form label {
-  font-family: "Girloy", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
