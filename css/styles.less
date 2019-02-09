@@ -4,35 +4,35 @@
 // Fonts
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url('../fonts/gilroy-extrabold.woff2') format('woff2'),
-  url('../fonts/gilroy-extrabold.woff') format('woff');
-  font-weight: 800;
-  font-style: normal;
+  font-family : "Gilroy";
+  src         : url("../fonts/gilroy-extrabold.woff2") format("woff2"),
+  url("../fonts/gilroy-extrabold.woff") format("woff");
+  font-weight : 800;
+  font-style  : normal;
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url('../fonts/gilroy-light.woff2') format('woff2'),
-  url('../fonts/gilroy-light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
+  font-family : "Gilroy";
+  src         : url("../fonts/gilroy-light.woff2") format("woff2"),
+  url("../fonts/gilroy-light.woff") format("woff");
+  font-weight : 300;
+  font-style  : normal;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/opensans-light.woff2') format('woff2'),
-  url('../fonts/opensans-light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
+  font-family : "Open Sans";
+  src         : url("../fonts/opensans-light.woff2") format("woff2"),
+  url("../fonts/opensans-light.woff") format("woff");
+  font-weight : 300;
+  font-style  : normal;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/opensans-regular.woff2') format('woff2'),
-  url('../fonts/opensans-regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
+  font-family : "Open Sans";
+  src         : url("../fonts/opensans-regular.woff2") format("woff2"),
+  url("../fonts/opensans-regular.woff") format("woff");
+  font-weight : 400;
+  font-style  : normal;
 }
 
 // Variables
@@ -292,6 +292,7 @@ p {
   .text-main(@gilroy, 800, 18px, 24px, 3.6px);
   background-image : linear-gradient(to bottom, white 8px, @main-orange 8px, @main-orange 16px, white 16px);
   text-transform   : uppercase;
+  cursor           : pointer;
 }
 
 .button:hover,
@@ -400,7 +401,7 @@ p {
 
   th {
     .text-main(@opensans, 300, 13px, 20px, 0.13px);
-    color       : #464646;
+    color : #464646;
   }
 
   td {
@@ -458,6 +459,19 @@ main {
   }
 
   &__button_active {
+    background-color : black;
+    background-image : none;
+    color            : @button-orange;
+  }
+
+  &__button_active:hover,
+  &__button_active:focus {
+    background-color : black;
+    background-image : none;
+    color            : @button-orange;
+  }
+
+  &__button_active:active {
     background-color : black;
     background-image : none;
     color            : @button-orange;

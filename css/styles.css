@@ -145,26 +145,26 @@ template {
   display: none;
 }
 @font-face {
-  font-family: 'Gilroy';
-  src: url('../fonts/gilroy-extrabold.woff2') format('woff2'), url('../fonts/gilroy-extrabold.woff') format('woff');
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy-extrabold.woff2") format("woff2"), url("../fonts/gilroy-extrabold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Gilroy';
-  src: url('../fonts/gilroy-light.woff2') format('woff2'), url('../fonts/gilroy-light.woff') format('woff');
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy-light.woff2") format("woff2"), url("../fonts/gilroy-light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/opensans-light.woff2') format('woff2'), url('../fonts/opensans-light.woff') format('woff');
+  font-family: "Open Sans";
+  src: url("../fonts/opensans-light.woff2") format("woff2"), url("../fonts/opensans-light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/opensans-regular.woff2') format('woff2'), url('../fonts/opensans-regular.woff') format('woff');
+  font-family: "Open Sans";
+  src: url("../fonts/opensans-regular.woff2") format("woff2"), url("../fonts/opensans-regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -369,6 +369,7 @@ p {
   letter-spacing: 3.6px;
   background-image: linear-gradient(to bottom, white 8px, #f0c52e 8px, #f0c52e 16px, white 16px);
   text-transform: uppercase;
+  cursor: pointer;
 }
 .button:hover,
 .button:focus {
@@ -519,6 +520,17 @@ main {
   color: #f7e184;
 }
 .services__button_active {
+  background-color: black;
+  background-image: none;
+  color: #f7e184;
+}
+.services__button_active:hover,
+.services__button_active:focus {
+  background-color: black;
+  background-image: none;
+  color: #f7e184;
+}
+.services__button_active:active {
   background-color: black;
   background-image: none;
   color: #f7e184;
