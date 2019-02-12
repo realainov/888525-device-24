@@ -78,7 +78,7 @@ html {
 a {
   text-decoration : none;
   color           : black;
-  transition: 0.3s;
+  transition      : 0.3s;
 }
 
 p {
@@ -147,9 +147,9 @@ p {
 
   &__site-navigation {
 
-    width : 1044px;
+    width         : 1044px;
 
-    margin-bottom: 51px;
+    margin-bottom : 51px;
 
     .site-navigation__list {
       display         : flex;
@@ -172,7 +172,7 @@ p {
     }
 
     .site-navigation__item:last-of-type {
-      margin-right: 0;
+      margin-right : 0;
     }
   }
 }
@@ -181,7 +181,7 @@ p {
 
 .site-main {
 
-  margin-top: -16px;
+  margin-top : -16px;
 
   &__bread-list {
 
@@ -215,11 +215,11 @@ p {
   }
 
   &__information {
-    display: flex;
-    justify-content: space-between;
+    display         : flex;
+    justify-content : space-between;
 
-    padding-top: 138px;
-    padding-bottom: 40px;
+    padding-top     : 138px;
+    padding-bottom  : 40px;
   }
 }
 
@@ -227,39 +227,39 @@ p {
 
 .site-footer {
 
-  padding-top: 65px;
-  padding-bottom: 67px;
+  padding-top      : 65px;
+  padding-bottom   : 67px;
 
   background-color : #464646;
 
   &__column {
-    display: flex;
-    justify-content: space-between;
+    display         : flex;
+    justify-content : space-between;
   }
 
   &__column-1 {
-    margin-bottom: 13px;
+    margin-bottom : 13px;
   }
 
   &__column-2 {
-    align-items: baseline;
+    align-items   : baseline;
 
-    margin-bottom: 50px;
+    margin-bottom : 50px;
   }
 
   &__column-3 {
-    width: 650px;
+    width      : 650px;
 
-    align-self: flex-end;
+    align-self : flex-end;
   }
 
   .wrapper {
-    display: flex;
-    flex-direction: column;
+    display        : flex;
+    flex-direction : column;
   }
 
   &__user-navigation {
-    display: flex;
+    display : flex;
   }
 
   &__user-navigation a {
@@ -281,23 +281,23 @@ p {
   }
 
   .site-navigation__list {
-    display: flex;
-    justify-content: space-between;
+    display         : flex;
+    justify-content : space-between;
 
-    margin: 0;
-    padding: 0;
+    margin          : 0;
+    padding         : 0;
 
-    position: relative;
-    left: -18px;
-    top: 5px;
+    position        : relative;
+    left            : -18px;
+    top             : 5px;
   }
 
   .site-navigation__item {
-    margin-right: 33px;
+    margin-right : 33px;
   }
 
   .site-navigation__item:last-child {
-    margin-right: 0;
+    margin-right : 0;
   }
 
   &__site-navigation a {
@@ -320,10 +320,10 @@ p {
   }
 
   &__social-list {
-    display: flex;
+    display    : flex;
 
-    margin: 0;
-    padding: 0;
+    margin     : 0;
+    padding    : 0;
 
     list-style : none;
 
@@ -342,11 +342,11 @@ p {
   }
 
   &__social-item {
-    margin-right: 23px;
+    margin-right : 23px;
   }
 
   &__social-item:last-child {
-    margin-right: 0;
+    margin-right : 0;
   }
 
   .html-academy-logo:hover,
@@ -366,10 +366,10 @@ p {
 //Wrapper
 
 .wrapper {
-  width: 1200px;
+  width   : 1200px;
 
-  margin: 0 auto;
-  padding: 0 20px;
+  margin  : 0 auto;
+  padding : 0 20px;
 }
 
 // Navigations
@@ -447,28 +447,28 @@ p {
   &__inner-list {
     display        : none;
 
-    width: 1040px;
+    width          : 1040px;
 
-    padding : 0;
+    padding        : 0;
 
-    position: absolute;
+    position       : absolute;
 
     .text-main(@opensans, 300, 15px, 36px, 0.15px);
-    text-transform: none;
+    text-transform : none;
   }
 
   &__inner-item {
-    margin-right: 77px;
+    margin-right : 77px;
   }
 
   &__inner-item:first-child {
-    margin-right: 58px;
+    margin-right : 58px;
   }
 
   &__catalog:hover + &__inner-list,
   &__catalog:focus + &__inner-list {
     display : flex;
-}
+  }
 
   &__inner-list:hover,
   &__inner-list:focus {
@@ -476,85 +476,85 @@ p {
   }
 
   &__basis {
-    width: 1px;
-    height: 0;
+    width  : 1px;
+    height : 0;
   }
 
   &__item:first-child:hover ~ &__basis {
-    height: 151px;
+    height : 151px;
   }
 
   &__basis:hover {
-    height: 151px;
+    height : 151px;
   }
 
   &__watch-list,
   &__hand-list,
   &__shoot-list {
-    margin: 0;
-    margin-top: 19px;
-    padding: 0;
+    margin     : 0;
+    margin-top : 19px;
+    padding    : 0;
 
-    list-style: none;
+    list-style : none;
   }
 }
 
 // Button
 
 .button {
-  display: block;
+  display        : block;
 
-  position: relative;
-  z-index: 1;
+  position       : relative;
+  z-index        : 1;
 
   .text-main(@gilroy, 800, 18px, 40px, 3.6px);
-  text-transform   : uppercase;
-  text-align: center;
-  vertical-align: middle;
+  text-transform : uppercase;
+  text-align     : center;
+  vertical-align : middle;
 
-  cursor           : pointer;
+  cursor         : pointer;
 }
 
 .button:active {
-  color            : rgba(0, 0, 0, 0.3);
+  color : rgba(0, 0, 0, 0.3);
 }
 
 .button::before {
-  display: block;
+  display          : block;
 
-  width: 100%;
-  height: 8px;
+  width            : 100%;
+  height           : 8px;
 
-  position: absolute;
-  content: "";
-  top: 15px;
-  z-index: -1;
+  position         : absolute;
+  content          : "";
+  top              : 15px;
+  z-index          : -1;
 
-  background-color: @main-orange;
+  background-color : @main-orange;
 
-  transition: 0.3s;
+  transition       : 0.3s;
 }
 
 .button:hover,
 .button:focus {
-  background-color: transparent;
+  background-color : transparent;
 }
 
 .button:hover::before,
 .button:focus::before {
-  height: 100%;
+  height : 100%;
 
-  top: 0;
+  top    : 0;
 }
 
 .button:active {
-  background-color: transparent;
+  background-color : transparent;
 }
 
 // Title
 
 .title {
-  margin: 0;
+  margin : 0;
 
   .text-main(@gilroy, 800, 47px, 56px, 0.47px);
 }
@@ -650,10 +650,10 @@ p {
 // Goods
 
 .goods {
-  width: 1160px;
+  width         : 1160px;
 
-  margin : 0;
-  margin-bottom: 100px;
+  margin        : 0;
+  margin-bottom : 100px;
 
   &__list {
     padding         : 0;
@@ -663,21 +663,21 @@ p {
   }
 
   &__item {
-    display: flex;
+    display          : flex;
 
-    padding-left: 31px;
-    padding-right: 80px;
+    padding-left     : 31px;
+    padding-right    : 80px;
 
-    position: relative;
+    position         : relative;
 
     background-image : linear-gradient(to bottom, @main-orange--half 113px, white 113px);
   }
 
   &__item::before {
-    position: absolute;
-    right: 42px;
-    top: -12px;
-    z-index: 1;
+    position          : absolute;
+    right             : 42px;
+    top               : -12px;
+    z-index           : 1;
 
     content           : '0' counter(num);
     counter-increment : num;
@@ -688,65 +688,65 @@ p {
 
   &__item:nth-child(2),
   &__item:nth-child(3) {
-    display: none;
+    display : none;
   }
 
   &__img-container {
-    flex-shrink: 0;
+    flex-shrink  : 0;
 
-    width: 526px;
+    width        : 526px;
 
-    margin-right: 42px;
+    margin-right : 42px;
 
-    text-align: center;
+    text-align   : center;
   }
 
   &__container {
-    padding-top: 80px;
+    padding-top : 80px;
   }
 
   &__title {
-    display: block;
+    display       : block;
 
-    margin-bottom: 20px;
+    margin-bottom : 20px;
 
-    position: relative;
-    z-index: 2;
+    position      : relative;
+    z-index       : 2;
   }
 
   &__item:nth-child(3) &__title {
-    margin-bottom: 28px;
+    margin-bottom : 28px;
   }
 
   p {
-    margin-bottom: 44px;
+    margin-bottom : 44px;
   }
 
   &__button {
-    background-image: none;
-    width: 220px;
+    background-image : none;
+    width            : 220px;
   }
 
   &__button:hover,
   &__button:focus {
-    background-color: transparent;
+    background-color : transparent;
   }
 
   &__button:active {
-    background-color: transparent;
+    background-color : transparent;
   }
 
   &__description {
-    margin-top: 53px;
-    margin-left: -1px;
+    margin-top  : 53px;
+    margin-left : -1px;
   }
 
   th {
-    padding-right: 78px;
-    padding-top: 5px;
+    padding-right : 78px;
+    padding-top   : 5px;
 
     .text-main(@opensans, 300, 13px, 20px, 0.13px);
-    color : #464646;
+    color         : #464646;
   }
 
   td {
@@ -758,17 +758,17 @@ p {
 
 .categories {
 
-  width: 1160px;
+  width : 1160px;
 
   &__logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display          : flex;
+    justify-content  : center;
+    align-items      : center;
 
     width            : 160px;
     height           : 160px;
 
-    margin-bottom: 39px;
+    margin-bottom    : 39px;
 
     background-color : @main-orange--half;
   }
@@ -783,22 +783,22 @@ p {
   }
 
   &__list {
-    display: flex;
-    justify-content: space-between;
+    display         : flex;
+    justify-content : space-between;
 
-    padding: 0;
-    margin: 0;
+    padding         : 0;
+    margin          : 0;
 
-    list-style : none;
+    list-style      : none;
     .text-main(@gilroy, 800, 18px, 24px, 0.18px);
   }
 
   &__item {
-    width: 160px;
+    width : 160px;
   }
 
   a {
-    width: 160px;
+    width : 160px;
   }
 }
 
@@ -809,111 +809,111 @@ p {
   background-image : linear-gradient(to bottom, white 100px, #e5e5e5 100px);
 
   .wrapper {
-    display: flex;
+    display     : flex;
 
-    padding-top: 135px;
+    padding-top : 135px;
   }
 
   &__button-list {
-    padding: 0;
-    margin: 0;
-    margin-top: 23px;
+    padding    : 0;
+    margin     : 0;
+    margin-top : 23px;
 
     list-style : none;
     .text-main(@gilroy, 800, 18px, 24px, 3.6px);
-    text-align: center;
+    text-align : center;
 
   }
 
   &__button {
-    width: 160px;
+    width : 160px;
   }
 
   &__button_active {
-    width: 278px;
+    width            : 278px;
 
-    padding-left: 19px;
+    padding-left     : 19px;
 
-    background-color: black;
-    text-align: left;
+    background-color : black;
+    text-align       : left;
   }
 
   &__button-item {
-    margin-bottom: 25px;
+    margin-bottom : 25px;
   }
 
   &__button-item:last-child {
-    margin-bottom: 0;
+    margin-bottom : 0;
   }
 
   &__button:active {
-    color            : @button-orange;
+    color : @button-orange;
   }
 
   &__button:active::before {
-    background-color: black;
+    background-color : black;
   }
 
   &__button_active {
-    height: 40px;
+    height           : 40px;
 
     color            : @button-orange;
-    background-color: black;
+    background-color : black;
   }
 
   &__button_active::before {
-    display: none;
+    display : none;
   }
 
   &__button_active:hover,
   &__button_active:focus {
     color            : @button-orange;
-    background-color: black;
+    background-color : black;
   }
 
   &__features-list {
-    width: 100%;
+    width          : 100%;
 
-    margin: 0;
-    margin-left: 123px;
-    margin-top: 12px;
-    padding: 0;
-    padding-bottom: 120px;
+    margin         : 0;
+    margin-left    : 123px;
+    margin-top     : 12px;
+    padding        : 0;
+    padding-bottom : 120px;
 
-    list-style : none;
+    list-style     : none;
   }
 
   &__features-item {
-    margin: 0;
-    padding-bottom: 10px;
+    margin            : 0;
+    padding-bottom    : 10px;
 
-    background-repeat: no-repeat;
+    background-repeat : no-repeat;
   }
 
   &__features-item:first-child {
-    background-image: url("../img/delivery.svg");
-    background-position: right 15px;
+    background-image    : url("../img/delivery.svg");
+    background-position : right 15px;
   }
 
   &__features-item:nth-child(2) {
-    display: none;
-    background-image: url("../img/warranty.svg");
-    background-position: right top;
+    display             : none;
+    background-image    : url("../img/warranty.svg");
+    background-position : right top;
   }
 
   &__features-item:nth-child(3) {
-    display: none;
-    background-image: url("../img/credit.svg");
-    background-position: right top;
+    display             : none;
+    background-image    : url("../img/credit.svg");
+    background-position : right top;
 
   }
 
   &__title {
-    margin-bottom: 28px;
+    margin-bottom : 28px;
   }
 
   p {
-    width: 436px;
+    width : 436px;
   }
 }
 
@@ -922,14 +922,14 @@ p {
 .companies {
 
   &__list {
-    display: flex;
-    justify-content: space-between;
+    display         : flex;
+    justify-content : space-between;
 
-    margin: 0;
-    margin-top: 95px;
-    padding: 0;
+    margin          : 0;
+    margin-top      : 95px;
+    padding         : 0;
 
-    list-style : none;
+    list-style      : none;
   }
 
   &__item a {
@@ -948,34 +948,34 @@ p {
 
 .about-us {
 
-  width: 500px;
+  width : 500px;
 
   &__list {
-    margin-top: 68px;
-    margin-left: -12px;
-    margin-bottom: 55px;
+    margin-top      : 68px;
+    margin-left     : -12px;
+    margin-bottom   : 55px;
 
     .text-main(@gilroy, 800, 16px, 40px, 0);
     list-style-type : none;
   }
 
   &__title {
-    margin-bottom: 38px;
+    margin-bottom : 38px;
   }
 
   p {
-    margin-bottom: 30px;
+    margin-bottom : 30px;
   }
 
   &__item::before {
-    position: relative;
-    left: -24px;
+    position : relative;
+    left     : -24px;
 
     .icon("slider-button.png", 8px, 8px);
   }
 
   &__button {
-    width: 260px;
+    width : 260px;
   }
 }
 
@@ -983,26 +983,26 @@ p {
 
 .contacts {
 
-  width: 560px;
+  width : 560px;
 
   &__title {
-    margin-bottom: 38px;
+    margin-bottom : 38px;
   }
 
   p {
-    margin-bottom: 40px;
+    margin-bottom : 40px;
   }
 
   &__button {
-    width: 260px;
+    width : 260px;
   }
 
   &__button::before {
-    width: 100%;
+    width : 100%;
   }
 
   img {
-    margin-bottom: 50px;
+    margin-bottom : 50px;
   }
 }
 
@@ -1193,7 +1193,7 @@ p {
 // Modal Contact Us
 
 .modal-contact-us {
-  display: none;
+  display : none;
 
   &__form {
     label {
@@ -1231,5 +1231,5 @@ p {
 }
 
 .modal-map {
-  display: none;
+  display : none;
 }
