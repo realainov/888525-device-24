@@ -19,7 +19,7 @@
     </a>
     <div class="site-header__container">
       <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-        <label class="visually-hidden" for="search-field">Поиск по сайту</label>
+        <label for="search-field" aria-label="Поиск по сайту"></label>
         <input class="search-form__field" autocomplete="off" type="text" name="search" id="search-field"
                placeholder="Поиск по сайту">
         <button class="search-form__button" type="submit" aria-label="Найти">Найти</button>
@@ -83,7 +83,6 @@
         <li class="site-navigation__item"><a href="#">Доставка</a></li>
         <li class="site-navigation__item"><a href="#">Гарантия</a></li>
         <li class="site-navigation__item"><a href="#">Контакты</a></li>
-        <div class="site-navigation__basis"></div>
       </ul>
     </nav>
   </header>
@@ -166,6 +165,14 @@
           </div>
         </li>
       </ol>
+      <ul class="goods__button-list">
+        <li class="goods__button-item goods__button-item--active"><a><img src="img/goods-button-active.png" width="12"
+                                                                          height="12" alt="Текущий слайд"></a></li>
+        <li class="goods__button-item"><a href=""><img src="img/goods-button-empty.png" width="12" height="12"
+                                                       alt="Следующий слайд"></a></li>
+        <li class="goods__button-item"><a href=""><img src="img/goods-button-empty.png" width="12" height="12"
+                                                       alt="Следующий слайд"></a></li>
+      </ul>
     </section>
     <section class="categories">
       <h2 class="visually-hidden">Категории</h2>
@@ -181,7 +188,7 @@
           <a href="monopods.html">
             <div class="categories__logo"><img src="img/popular-2.svg" width="86" height="117"
                                                alt="Иконка монопода для селфи"></div>
-            Моноподы для селфи
+            Моноподы для&nbsp;селфи
           </a>
         </li>
         <li class="categories__item">
@@ -220,7 +227,7 @@
       <h2 class="visually-hidden">Сервис</h2>
       <ul class="services__button-list">
         <li class="services__button-item">
-          <a class="services__button services__button_active button">Доставка</a>
+          <a class="services__button services__button--active button">Доставка</a>
         </li>
         <li class="services__button-item">
           <a class="services__button button" href="#">Гарантия</a>

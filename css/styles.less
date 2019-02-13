@@ -54,13 +54,16 @@
 }
 
 .icon(@_name-icon, @_width-icon, @_height-icon) {
+  display             : inline-block;
+
+  width               : @_width-icon;
+  height              : @_height-icon;
+
   content             : "";
+
   background-image    : url("../img/@{_name-icon}");
   background-repeat   : no-repeat;
   background-position : center;
-  width               : @_width-icon;
-  height              : @_height-icon;
-  display             : inline-block;
 }
 
 // Styles
@@ -159,12 +162,9 @@ p {
       padding-left    : 0;
     }
 
-    .site-navigation__item {
-      margin-right : 35px;
-    }
-
     .site-navigation__item:nth-child(2) {
-      margin-left : 270px;
+      margin-left  : 305px;
+      margin-right : 35px;
     }
 
     .site-navigation__item:nth-child(3) {
@@ -181,14 +181,13 @@ p {
 
 .site-main {
 
-  margin-top : -16px;
-
   &__bread-list {
 
     list-style : none;
 
     a {
       .text-main(@opensans, 300, 14px, 24px, 0.14px);
+
       opacity : 0.3;
     }
 
@@ -431,8 +430,8 @@ p {
     left     : 12px;
     top      : 1px;
 
-    opacity  : 0.3;
     .icon("plus.svg", 16px, 16px);
+    opacity  : 0.3;
   }
 
   a[href]:hover,
@@ -445,16 +444,19 @@ p {
   }
 
   &__inner-list {
-    display        : none;
+    display          : none;
 
-    width          : 1040px;
+    width            : 1060px;
+    height           : 163.5px;
 
-    padding        : 0;
+    padding          : 0;
 
-    position       : absolute;
+    position         : absolute;
+    z-index          : 5;
 
+    background-color : #f7e296;
     .text-main(@opensans, 300, 15px, 36px, 0.15px);
-    text-transform : none;
+    text-transform   : none;
   }
 
   &__inner-item {
@@ -473,19 +475,6 @@ p {
   &__inner-list:hover,
   &__inner-list:focus {
     display : flex;
-  }
-
-  &__basis {
-    width  : 1px;
-    height : 0;
-  }
-
-  &__item:first-child:hover ~ &__basis {
-    height : 151px;
-  }
-
-  &__basis:hover {
-    height : 151px;
   }
 
   &__watch-list,
@@ -526,9 +515,10 @@ p {
   height           : 8px;
 
   position         : absolute;
-  content          : "";
-  top              : 15px;
+  top              : 16px;
   z-index          : -1;
+
+  content          : "";
 
   background-color : @main-orange;
 
@@ -579,10 +569,10 @@ p {
 
   margin-left : 3px;
 
-  &::before {
+  label::before {
     position : relative;
-    top      : 3px;
     left     : 0.5px;
+    top      : 3px;
 
     .icon("search.svg", 16px, 16px);
   }
@@ -593,19 +583,20 @@ p {
 
     margin-left      : 15px;
 
-    .text-main(@opensans, 300, 15px, 30px, 0.15px);
-    color            : rgba(0, 0, 0, 0.3);
     background-color : transparent;
+    .text-main(@opensans, 300, 15px, 30px, 0.15px);
     border           : none;
     outline          : none;
+
+    opacity          : 0.3;
   }
 
   &__field:hover {
-    color : rgba(0, 0, 0, 0.6);
+    opacity : 0.6;
   }
 
   &__field:focus {
-    color : black;
+    opacity : 1;
   }
 
   &:focus-within {
@@ -617,17 +608,20 @@ p {
   }
 
   &__button {
-    width            : 85px;
-    height           : 49px;
-
     visibility       : hidden;
 
-    .text-main(@opensans, 300, 15px, 30px, 0.15px);
-    background-color : transparent;
+    width            : 85px;
+
+    padding-top      : 9px;
+    padding-bottom   : 9px;
+
     border-left      : 2px solid black;
     border-top       : 2px solid black;
     border-right     : 2px solid black;
     border-bottom    : none;
+
+    background-color : transparent;
+    .text-main(@opensans, 300, 15px, 30px, 0.15px);
   }
 
   &__button:hover,
@@ -655,7 +649,10 @@ p {
   margin        : 0;
   margin-bottom : 100px;
 
+  position      : relative;
+
   &__list {
+    margin          : 0;
     padding         : 0;
 
     list-style-type : none;
@@ -684,6 +681,19 @@ p {
 
     .text-main(@gilroy, 800, 179px, 179px, 1.79px);
     color             : white;
+  }
+
+  &__item::after {
+    width            : 100px;
+    height           : 7px;
+
+    position         : absolute;
+    right            : 460px;
+    top              : 38px;
+
+    content          : "";
+
+    background-color : white;
   }
 
   &__item:nth-child(2),
@@ -725,6 +735,8 @@ p {
   &__button {
     background-image : none;
     width            : 220px;
+
+    margin-bottom    : 45px;
   }
 
   &__button:hover,
@@ -737,7 +749,6 @@ p {
   }
 
   &__description {
-    margin-top  : 53px;
     margin-left : -1px;
   }
 
@@ -752,13 +763,36 @@ p {
   td {
     .text-main(@gilroy, 300, 36px, 48px, 0.36px);
   }
+
+  &__button-list {
+    display    : flex;
+
+    list-style : none;
+
+    margin     : 0;
+    padding    : 0;
+
+    position   : absolute;
+    right      : 82px;
+    bottom     : 147px;
+  }
+
+  &__button-item {
+    margin-right : 21px;
+  }
+
+  &__button-item:last-child {
+    margin-right : 0;
+  }
 }
 
 // Categories
 
 .categories {
 
-  width : 1160px;
+  width          : 1160px;
+
+  padding-bottom : 67.5px;
 
   &__logo {
     display          : flex;
@@ -773,21 +807,30 @@ p {
     background-color : @main-orange--half;
   }
 
+  &__item:nth-child(2) &__logo {
+    align-items : flex-end;
+  }
+
   &__item a:hover &__logo,
   &__item a:focus &__logo {
     background-color : @main-orange;
   }
 
   &__item a:active img {
-    opacity : 0.5;
+    opacity : 0.3;
+  }
+
+  &__item a:active {
+    opacity    : 0.5;
+    transition : 0s;
   }
 
   &__list {
     display         : flex;
     justify-content : space-between;
 
-    padding         : 0;
     margin          : 0;
+    padding         : 0;
 
     list-style      : none;
     .text-main(@gilroy, 800, 18px, 24px, 0.18px);
@@ -806,36 +849,38 @@ p {
 
 .services {
 
-  background-image : linear-gradient(to bottom, white 100px, #e5e5e5 100px);
+  background-image : linear-gradient(to bottom, white 110px, #e5e5e5 110px);
 
   .wrapper {
     display     : flex;
 
-    padding-top : 135px;
+    padding-top : 67.5px;
   }
 
   &__button-list {
-    padding    : 0;
     margin     : 0;
     margin-top : 23px;
+    padding    : 0;
 
-    list-style : none;
+    position   : relative;
+
     .text-main(@gilroy, 800, 18px, 24px, 3.6px);
+    list-style : none;
     text-align : center;
 
   }
 
-  &__button {
-    width : 160px;
-  }
+  &__button-list::after {
+    width            : 7px;
+    height           : 319px;
 
-  &__button_active {
-    width            : 278px;
+    position         : absolute;
+    right            : -6px;
+    top              : -80px;
 
-    padding-left     : 19px;
+    content          : "";
 
     background-color : black;
-    text-align       : left;
   }
 
   &__button-item {
@@ -846,6 +891,10 @@ p {
     margin-bottom : 0;
   }
 
+  &__button {
+    width : 160px;
+  }
+
   &__button:active {
     color : @button-orange;
   }
@@ -854,31 +903,40 @@ p {
     background-color : black;
   }
 
-  &__button_active {
+  &__button--active {
+    width            : 278px;
     height           : 40px;
 
-    color            : @button-orange;
+    padding-left     : 19px;
+
     background-color : black;
+
+    color            : @button-orange;
+    text-align       : left;
+
+    cursor           : default;
   }
 
-  &__button_active::before {
+  &__button--active::before {
     display : none;
   }
 
-  &__button_active:hover,
-  &__button_active:focus {
-    color            : @button-orange;
+  &__button--active:hover,
+  &__button--active:focus {
     background-color : black;
+    color            : @button-orange;
   }
 
   &__features-list {
     width          : 100%;
 
     margin         : 0;
-    margin-left    : 123px;
-    margin-top     : 12px;
+    margin-left    : 122px;
     padding        : 0;
+    padding-top    : 12px;
     padding-bottom : 120px;
+
+    position       : relative;
 
     list-style     : none;
   }
@@ -926,8 +984,8 @@ p {
     justify-content : space-between;
 
     margin          : 0;
-    margin-top      : 95px;
     padding         : 0;
+    padding-top     : 95px;
 
     list-style      : none;
   }
