@@ -740,11 +740,11 @@ p {
   margin-bottom: 39px;
   background-color: rgba(240, 197, 46, 0.5);
 }
-.categories__logo:hover,
-.categories__logo:focus {
+.categories__item a:hover .categories__logo,
+.categories__item a:focus .categories__logo {
   background-color: #f0c52e;
 }
-.categories__logo:active img {
+.categories__item a:active img {
   opacity: 0.5;
 }
 .categories__list {
