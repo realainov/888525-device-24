@@ -1217,11 +1217,11 @@ p {
     }
   }
 
-  input[type="checkbox"] {
+  &__checkbox {
     display : none;
   }
 
-  input[type="checkbox"] + label {
+  &__checkbox + label {
     display      : block;
 
     padding-left : 38px;
@@ -1231,7 +1231,7 @@ p {
     cursor       : pointer;
   }
 
-  input[type="checkbox"] + label::before {
+  &__checkbox + label::before {
     position   : absolute;
     left       : 0;
     top        : 7px;
@@ -1246,17 +1246,17 @@ p {
     opacity : 0.6;
   }
 
-  input[type="checkbox"]:checked + label::before {
+  &__checkbox:checked + label::before {
     .icon("checkbox-on.svg", 27px, 23px);
 
     transform : rotate(360deg);
   }
 
-  input[type="radio"] {
+  &__radio {
     display : none;
   }
 
-  input[type="radio"] + label {
+  &__radio + label {
     display      : block;
 
     padding-left : 38px;
@@ -1266,7 +1266,7 @@ p {
     cursor       : pointer;
   }
 
-  input[type="radio"] + label::before {
+  &__radio + label::before {
     position : absolute;
     left     : 0;
     top      : 7px;
@@ -1274,12 +1274,23 @@ p {
     .icon("radio-off.svg", 25px, 25px);
   }
 
-  input[type="radio"]:hover + label::before,
-  input[type="radio"]:focus + label::before {
+  &__radio:hover + label::before,
+  &__radio:focus + label::before {
     .icon("radio-on.svg", 25px, 25px);
   }
 
-  input[type="radio"]:checked + label::before {
+  &__radio[disabled]:hover + label::before,
+  &__radio[disabled]:focus + label::before {
+    .icon("radio-off.svg", 25px, 25px);
+    cursor: default;
+  }
+
+  &__radio[disabled]:hover + label,
+  &__radio[disabled]:focus + label {
+    cursor: default;
+  }
+
+  &__radio:checked + label::before {
     .icon("radio-on.svg", 25px, 25px);
   }
 
@@ -1507,8 +1518,9 @@ p {
     text-align : center;
   }
 
-  &__img:hover ~ &__more,
-  &__img:focus ~ &__more {
+  &__box:hover &__more,
+  &__box:focus &__more
+  &__box:focus-within &__more {
     display : block;
   }
 

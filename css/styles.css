@@ -1066,16 +1066,16 @@ p {
   line-height: 24px;
   letter-spacing: 0.18px;
 }
-.filters input[type="checkbox"] {
+.filters__checkbox {
   display: none;
 }
-.filters input[type="checkbox"] + label {
+.filters__checkbox + label {
   display: block;
   padding-left: 38px;
   position: relative;
   cursor: pointer;
 }
-.filters input[type="checkbox"] + label::before {
+.filters__checkbox + label::before {
   position: absolute;
   left: 0;
   top: 7px;
@@ -1092,7 +1092,7 @@ p {
 .filters input:focus + label::before {
   opacity: 0.6;
 }
-.filters input[type="checkbox"]:checked + label::before {
+.filters__checkbox:checked + label::before {
   display: inline-block;
   width: 27px;
   height: 23px;
@@ -1102,16 +1102,16 @@ p {
   background-position: center;
   transform: rotate(360deg);
 }
-.filters input[type="radio"] {
+.filters__radio {
   display: none;
 }
-.filters input[type="radio"] + label {
+.filters__radio + label {
   display: block;
   padding-left: 38px;
   position: relative;
   cursor: pointer;
 }
-.filters input[type="radio"] + label::before {
+.filters__radio + label::before {
   position: absolute;
   left: 0;
   top: 7px;
@@ -1123,8 +1123,8 @@ p {
   background-repeat: no-repeat;
   background-position: center;
 }
-.filters input[type="radio"]:hover + label::before,
-.filters input[type="radio"]:focus + label::before {
+.filters__radio:hover + label::before,
+.filters__radio:focus + label::before {
   display: inline-block;
   width: 25px;
   height: 25px;
@@ -1133,7 +1133,22 @@ p {
   background-repeat: no-repeat;
   background-position: center;
 }
-.filters input[type="radio"]:checked + label::before {
+.filters__radio[disabled]:hover + label::before,
+.filters__radio[disabled]:focus + label::before {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  content: "";
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: default;
+}
+.filters__radio[disabled]:hover + label,
+.filters__radio[disabled]:focus + label {
+  cursor: default;
+}
+.filters__radio:checked + label::before {
   display: inline-block;
   width: 25px;
   height: 25px;
@@ -1316,8 +1331,8 @@ p {
   top: 184px;
   text-align: center;
 }
-.cards__img:hover ~ .cards__more,
-.cards__img:focus ~ .cards__more {
+.cards__box:hover .cards__more,
+.cards__box:focus .cards__more .cards__box:focus-within .cards__more {
   display: block;
 }
 .cards__button {
