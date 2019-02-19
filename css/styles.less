@@ -113,7 +113,7 @@ p {
 
 .header-page-wrapper {
   background-image : linear-gradient(to right, #d9d9d9 50%, #ebebeb 50%);
-  height: 72px;
+  height           : 72px;
 }
 
 .main-page-wrapper {
@@ -351,15 +351,15 @@ p {
   padding-top    : 65px;
   padding-bottom : 67px;
 
-  position: relative;
+  position       : relative;
 
   &::after {
     width            : 80px;
     height           : 7px;
 
     position         : absolute;
-    left            : 0;
-    bottom              : 90px;
+    left             : 0;
+    bottom           : 90px;
 
     content          : "";
 
@@ -1072,19 +1072,19 @@ p {
 
 .about-us {
 
-  display: flex;
-  flex-direction: column;
+  display        : flex;
+  flex-direction : column;
 
-  width : 500px;
+  width          : 500px;
 
-  position: relative;
+  position       : relative;
 
   &::after {
     width            : 80px;
     height           : 7px;
 
     position         : absolute;
-    left            : 0;
+    left             : 0;
     top              : -49px;
 
     content          : "";
@@ -1107,7 +1107,7 @@ p {
   }
 
   p {
-    width: 490px;
+    width         : 490px;
 
     margin-bottom : 17px;
   }
@@ -1128,19 +1128,19 @@ p {
 
 .contacts {
 
-  display: flex;
-  flex-direction: column;
+  display        : flex;
+  flex-direction : column;
 
-  width : 560px;
+  width          : 560px;
 
-  position: relative;
+  position       : relative;
 
   &::after {
     width            : 80px;
     height           : 7px;
 
     position         : absolute;
-    left            : 0;
+    left             : 0;
     top              : -49px;
 
     content          : "";
@@ -1157,13 +1157,13 @@ p {
   }
 
   img {
-    margin-bottom: auto;
+    margin-bottom : auto;
   }
 
   &__button {
     width      : 260px;
 
-    margin-top: auto;
+    margin-top : auto;
   }
 }
 
@@ -1174,7 +1174,7 @@ p {
 
   padding-top      : 24px;
   padding-bottom   : 24px;
-  padding-left: 62px;
+  padding-left     : 62px;
 
   background-color : #d9d9d9;
   .text-main(@gilroy, 800, 16px, 24px, 3.2px);
@@ -1197,9 +1197,9 @@ p {
     padding-right  : 68px;
 
     fieldset {
-      position: relative;
+      position : relative;
 
-      border : none;
+      border   : none;
     }
 
     legend {
@@ -1208,53 +1208,53 @@ p {
   }
 
   input[type="checkbox"] {
-    display: none;
+    display : none;
   }
 
   input[type="checkbox"] + label {
-    display: block;
+    display      : block;
 
-    padding-left: 38px;
+    padding-left : 38px;
 
-    position: relative;
+    position     : relative;
 
-    cursor: pointer;
+    cursor       : pointer;
   }
 
   input[type="checkbox"] + label:before {
-    position: absolute;
-    left: 0;
-    top: 7px;
+    position   : absolute;
+    left       : 0;
+    top        : 7px;
 
     .icon("checkbox-off.svg", 23px, 23px);
 
-    transition: all 0.3s;
+    transition : all 0.3s;
   }
 
   input[type="checkbox"]:checked + label:before {
     .icon("checkbox-on.svg", 27px, 23px);
 
-    transform: rotate(360deg);
+    transform : rotate(360deg);
   }
 
   input[type="radio"] {
-    display: none;
+    display : none;
   }
 
   input[type="radio"] + label {
-    display: block;
+    display      : block;
 
-    padding-left: 38px;
+    padding-left : 38px;
 
-    position: relative;
+    position     : relative;
 
-    cursor: pointer;
+    cursor       : pointer;
   }
 
   input[type="radio"] + label:before {
-    position: absolute;
-    left: 0;
-    top: 7px;
+    position : absolute;
+    left     : 0;
+    top      : 7px;
 
     .icon("radio-off.svg", 25px, 25px);
   }
@@ -1265,8 +1265,8 @@ p {
 
   &__color-list,
   &__bluetooth-list {
-    margin: 0;
-    padding: 0;
+    margin     : 0;
+    padding    : 0;
 
     list-style : none;
   }
@@ -1276,52 +1276,52 @@ p {
   }
 
   &__button {
-    width: 200px;
+    width            : 200px;
 
-    margin-left: 12px;
+    margin-left      : 12px;
 
-    border : none;
+    border           : none;
 
-    background-color: transparent;
+    background-color : transparent;
   }
 
   fieldset {
-    position: relative;
+    position : relative;
   }
 
   fieldset::after {
-    content: "";
+    content          : "";
 
-    display: block;
+    display          : block;
 
-    width: 200px;
-    height: 2px;
+    width            : 200px;
+    height           : 2px;
 
-    position: absolute;
-    top: -12px;
+    position         : absolute;
+    top              : -12px;
 
-    background-color: black;
+    background-color : black;
   }
 
   &__cost {
-    margin-bottom: 100px;
+    margin-bottom : 100px;
   }
 
   &__colors {
 
-    margin-bottom: 32px;
+    margin-bottom : 32px;
 
     legend {
-      margin-bottom: 14px;
+      margin-bottom : 14px;
     }
   }
 
   &__bluetooth {
 
-    margin-bottom: 20px;
+    margin-bottom : 20px;
 
     legend {
-      margin-bottom: 14px;
+      margin-bottom : 14px;
     }
   }
 }
@@ -1337,7 +1337,7 @@ p {
 
   padding-top      : 24px;
   padding-bottom   : 24px;
-  padding-left: 73px;
+  padding-left     : 73px;
 
   background-color : #ebebeb;
 
@@ -1375,17 +1375,17 @@ p {
   }
 
   &__type-item {
-    display : inline;
+    display      : inline;
 
-    margin-right: 25px;
+    margin-right : 25px;
   }
 
   &__course-list {
-    margin     : 0;
-    margin-left: auto;
-    padding    : 0;
+    margin      : 0;
+    margin-left : auto;
+    padding     : 0;
 
-    list-style : none;
+    list-style  : none;
 
     a[href] {
       opacity : 0.2;
@@ -1402,59 +1402,59 @@ p {
   }
 
   &__course-item {
-    display : inline;
+    display      : inline;
 
-    margin-right: 15px;
+    margin-right : 15px;
   }
 
   &__course-item:last-child {
-    margin-right: 0;
+    margin-right : 0;
   }
 }
 
 // Cards
 
 .cards {
-  width: 832px;
+  width            : 832px;
 
-  padding-top: 68px;
-  padding-left: 72px;
-  padding-bottom: 78px;
+  padding-top      : 68px;
+  padding-left     : 72px;
+  padding-bottom   : 78px;
 
   background-color : white;
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display         : flex;
+    flex-wrap       : wrap;
+    justify-content : space-between;
 
-    margin: 0;
-    padding: 0;
+    margin          : 0;
+    padding         : 0;
 
-    list-style : none;
+    list-style      : none;
   }
 
   &__item {
-    width: 360px;
+    width         : 360px;
 
-    margin-bottom: 46px;
+    margin-bottom : 46px;
 
-    position: relative;
+    position      : relative;
   }
 
   &__information {
-    display: flex;
-    justify-content: space-between;
+    display         : flex;
+    justify-content : space-between;
 
-    width: 100%;
+    width           : 100%;
 
-    margin-top: 28px;
+    margin-top      : 28px;
   }
 
   &__name {
-    display: inline-block;
+    display : inline-block;
 
-    width: 260px;
+    width   : 260px;
 
     .text-main(@gilroy, 800, 18px, 24px, 0.18px);
   }
@@ -1466,51 +1466,51 @@ p {
 
   &__img:hover img,
   &__img:focus img {
-    opacity: 0.7;
+    opacity : 0.7;
   }
 
   &__more {
-    display: none;
+    display    : none;
 
-    position: absolute;
-    left: 80px;
-    top: 184px;
+    position   : absolute;
+    left       : 80px;
+    top        : 184px;
 
-    text-align: center;
+    text-align : center;
   }
 
   &__img:hover ~ &__more,
   &__img:focus ~ &__more {
-    display: block;
+    display : block;
   }
 
   &__button {
-    width: 200px;
+    width : 200px;
   }
 
   &__more:hover,
   &__more:focus {
-    display: block;
+    display : block;
   }
 
   &__new {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
 
-    width: 60px;
-    height: 60px;
+    width           : 60px;
+    height          : 60px;
 
-    position: absolute;
-    right: 28px;
-    top: 28px;
+    position        : absolute;
+    right           : 28px;
+    top             : 28px;
 
-    border: 2px solid rgba(0, 0, 0, 0.2);
-    border-radius: 50%;
+    border          : 2px solid rgba(0, 0, 0, 0.2);
+    border-radius   : 50%;
 
     .text-main(@gilroy, 800, 14px, 24px, 0.7px);
-    color          : rgba(0, 0, 0, 0.2);
-    text-transform : uppercase;
+    color           : rgba(0, 0, 0, 0.2);
+    text-transform  : uppercase;
   }
 
   &__compare {
@@ -1529,32 +1529,32 @@ p {
   }
 
   &__navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display          : flex;
+    justify-content  : space-between;
+    align-items      : center;
 
-    margin-top: -12px;
+    margin-top       : -12px;
 
-    background-color: #ebebeb;
+    background-color : #ebebeb;
     .text-main(@gilroy, 800, 16px, 24px, 3.2px);
-    text-transform: uppercase;
+    text-transform   : uppercase;
   }
 
   &__navigation-list {
-    display: flex;
+    display    : flex;
 
-    margin: 0;
-    padding: 0;
+    margin     : 0;
+    padding    : 0;
 
     list-style : none;
   }
 
   &__navigation-item {
-    margin-right: 30px;
+    margin-right : 30px;
   }
 
   &__navigation-item:last-child {
-    margin-right: 0;
+    margin-right : 0;
   }
 
   &__navigation-item a[href] {
@@ -1579,10 +1579,10 @@ p {
 
   &__navigation > a:nth-child(2),
   &__navigation > a:last-child {
-    padding-top: 23px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 23px;
+    padding-top    : 23px;
+    padding-left   : 30px;
+    padding-right  : 30px;
+    padding-bottom : 23px;
   }
 
   &__navigation:nth-child(2) > a,
