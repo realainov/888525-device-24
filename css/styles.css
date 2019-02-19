@@ -1332,7 +1332,8 @@ p {
   text-align: center;
 }
 .cards__box:hover .cards__more,
-.cards__box:focus .cards__more .cards__box:focus-within .cards__more {
+.cards__box:focus .cards__more,
+.cards__box:focus-within .cards__more {
   display: block;
 }
 .cards__button {
