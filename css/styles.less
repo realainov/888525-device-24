@@ -249,7 +249,7 @@ p {
 
     .site-navigation__list {
       display         : flex;
-      justify-content : space-between;
+      justify-content : flex-end;
 
       padding-top     : 30px;
       padding-left    : 0;
@@ -260,15 +260,15 @@ p {
     }
 
     .site-navigation__item:nth-child(2) {
-      transform : translateX(245%);
+      margin-left : auto;
     }
 
     .site-navigation__item:nth-child(3) {
-      transform : translateX(295%);
+      margin-left : 32px;
     }
 
-    .site-navigation__item:last-child {
-      margin-left : auto;
+    .site-navigation__item:nth-child(4) {
+      margin-left : 110px;
     }
   }
 }
@@ -666,10 +666,6 @@ p {
     border-bottom : 2px solid black;
   }
 
-  &__field:focus + &__button {
-    visibility : visible;
-  }
-
   &__button {
     visibility       : hidden;
 
@@ -693,6 +689,10 @@ p {
 
     background-color : black;
     color            : white;
+  }
+
+  &:focus-within &__button {
+    visibility : visible;
   }
 
   &__button:active {
@@ -843,6 +843,16 @@ p {
 
   &__button-item {
     margin-right : 21px;
+
+    a::before {
+      .icon("goods-button-empty.png", 12px, 12px);
+    }
+  }
+
+  &__button-item--active {
+    a::before {
+      .icon("goods-button-active.png", 12px, 12px);
+    }
   }
 
   &__button-item:last-child {
@@ -1221,17 +1231,22 @@ p {
     cursor       : pointer;
   }
 
-  input[type="checkbox"] + label:before {
+  input[type="checkbox"] + label::before {
     position   : absolute;
     left       : 0;
     top        : 7px;
 
     .icon("checkbox-off.svg", 23px, 23px);
 
-    transition : all 0.3s;
+    transition : transform 0.3s, opacity 0.3s;
   }
 
-  input[type="checkbox"]:checked + label:before {
+  input:hover + label::before,
+  input:focus + label::before {
+    opacity : 0.6;
+  }
+
+  input[type="checkbox"]:checked + label::before {
     .icon("checkbox-on.svg", 27px, 23px);
 
     transform : rotate(360deg);
@@ -1251,7 +1266,7 @@ p {
     cursor       : pointer;
   }
 
-  input[type="radio"] + label:before {
+  input[type="radio"] + label::before {
     position : absolute;
     left     : 0;
     top      : 7px;
@@ -1259,8 +1274,21 @@ p {
     .icon("radio-off.svg", 25px, 25px);
   }
 
-  input[type="radio"]:checked + label:before {
+  input[type="radio"]:hover + label::before,
+  input[type="radio"]:focus + label::before {
     .icon("radio-on.svg", 25px, 25px);
+  }
+
+  input[type="radio"]:checked + label::before {
+    .icon("radio-on.svg", 25px, 25px);
+  }
+
+  input[disabled] + label {
+    color : #a6a6a6;
+  }
+
+  input[disabled] + label::before {
+    opacity : 0.25;
   }
 
   &__color-list,
@@ -1464,8 +1492,8 @@ p {
     color : #464646;
   }
 
-  &__img:hover img,
-  &__img:focus img {
+  &__box:hover img,
+  &__box:focus-within img {
     opacity : 0.7;
   }
 
@@ -1570,36 +1598,42 @@ p {
     opacity : 1;
   }
 
-  &__navigation > a:nth-child(2):hover,
-  &__navigation > a:last-child:hover,
-  &__navigation > a:nth-child(2):focus,
-  &__navigation > a:last-child:focus {
+  &__navigation > a:first-of-type:hover,
+  &__navigation > a:last-of-type:hover,
+  &__navigation > a:first-of-type:focus,
+  &__navigation > a:last-of-type:focus {
     background-color : #d9d9d9;
   }
 
-  &__navigation > a:nth-child(2),
-  &__navigation > a:last-child {
+  &__navigation > a:first-of-type,
+  &__navigation > a:last-of-type {
     padding-top    : 23px;
     padding-left   : 30px;
     padding-right  : 30px;
     padding-bottom : 23px;
   }
 
-  &__navigation:nth-child(2) > a,
-  &__navigation:last-child > a {
+  &__navigation:first-of-type > a,
+  &__navigation:last-of-type > a {
     opacity : 1;
   }
 
-  &__navigation:nth-child(2) > a:hover,
-  &__navigation:last-child > a:hover,
-  &__navigation:nth-child(2) > a:focus,
-  &__navigation:last-child > a:focus {
+  &__navigation:first-of-type > a:hover,
+  &__navigation:last-of-type > a:hover,
+  &__navigation:first-of-type > a:focus,
+  &__navigation:last-of-type > a:focus {
     opacity : 1;
   }
 
-  &__navigation:nth-child(2) > a:active,
-  &__navigation:last-child > a:active {
+  &__navigation:first-of-type > a:active,
+  &__navigation:last-of-type > a:active {
     opacity : 0.3;
+  }
+
+  &__navigation:first-of-type > a:not([href]),
+  &__navigation:last-of-type > a:not([href]) {
+    opacity          : 0.3;
+    background-color : #ebebeb;
   }
 }
 
