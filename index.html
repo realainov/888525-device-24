@@ -395,12 +395,21 @@
 <section class="modal modal-contact-us">
   <h2 class="visually-hidden">Написать нам</h2>
   <form class="modal-contact-us__form" action="https://echo.htmlacademy.ru" method="post">
-    <label for="name-field">Ваше имя:</label>
-    <input id="name-field" type="text" name="name" placeholder="Имя Фамилия" aria-label="Имя Фамилия">
-    <label for="email-field">Ваш e-mail:</label>
-    <input id="email-field" type="email" name="email" placeholder="email@example.com" aria-label="email@example.com">
-    <label for="text-field">Текст письма:</label>
-    <textarea id="text-field" name="text" placeholder="В свободной форме" aria-label="В свободной форме"></textarea>
+    <div class="modal-contact-us__name">
+      <label for="name-field">Ваше имя:</label>
+      <input id="name-field" type="text" name="name" placeholder="Имя Фамилия" aria-label="Имя Фамилия"
+             pattern="[^0-9]+$" required>
+    </div>
+    <div class="modal-contact-us__email">
+      <label for="email-field">Ваш e-mail:</label>
+      <input id="email-field" type="email" name="email" placeholder="email@example.com" aria-label="email@example.com"
+             required>
+    </div>
+    <div class="modal-contact-us__text">
+      <label for="text-field">Текст письма:</label>
+      <textarea id="text-field" name="text" placeholder="В свободной форме" aria-label="В свободной форме"
+                required></textarea>
+    </div>
     <button class="modal-contact-us__send-button button" type="submit">Отправить</button>
   </form>
   <button class="modal__close-button" type="button" title="Закрыть окно">
@@ -412,7 +421,7 @@
 </section>
 <section class="modal modal-map">
   <h2 class="visually-hidden">Как до нас добраться</h2>
-  <img src="img/map-big-3x.jpg" width="999" height="598" alt="Карта большого размера">
+  <img src="img/map-big-3x.jpg" width="960" height="559" alt="Карта большого размера">
   <button class="modal__close-button" type="button" title="Закрыть окно">
     <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55">
       <path fill="#F0C52E"

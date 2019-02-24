@@ -1670,20 +1670,71 @@ p {
 
 // Modal Contact Us
 
+.modal {
+
+  margin   : 0 auto;
+
+  position : relative;
+
+  &__close-button {
+    position : absolute;
+
+    top      : 22px;
+    right    : 22px;
+  }
+}
+
 .modal-contact-us {
-  display : none;
+
+  width          : 960px;
+
+  margin-bottom  : 50px;
+  padding-top    : 100px;
+  padding-right  : 100px;
+  padding-bottom : 92px;
+  padding-left   : 100px;
+
+  box-shadow     : 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
 
   &__form {
+
+    display   : flex;
+    flex-wrap : wrap;
+
     label {
+      display       : block;
+
+      margin-bottom : 13px;
+
       .text-main(@gilroy, 800, 18px, 24px, 0);
+    }
+
+    input {
+      width  : 360px;
+      height : 50px;
+    }
+
+    textarea {
+      width       : 760px;
+      height      : 156px;
+
+      padding-top : 18px;
+
+      resize      : none;
     }
 
     input,
     textarea {
+      padding-left     : 20px;
+      padding-right    : 20px;
+
+      background-color : #f2f2f2;
       .text-main(@opensans, 400, 14px, 18px, 0);
       color            : rgba(70, 70, 70, 0.4);
-      background-color : #f2f2f2;
+
       border           : none;
+
+      opacity          : 0.5;
     }
 
     input:hover,
@@ -1694,19 +1745,49 @@ p {
     input:focus,
     textarea:focus {
       background-color : white;
+      color            : black;
+
+      opacity          : 1;
+
       outline          : 3px solid #f0c52e;
     }
 
-    textarea {
-      resize : none;
+    input:valid,
+    textarea:valid {
+      color   : black;
+
+      opacity : 1;
     }
+
+    input:invalid,
+    textarea:invalid {
+      background-color : #f6dada;
+    }
+
+  }
+
+  &__name {
+    margin-right  : 40px;
+    margin-bottom : 39px;
   }
 
   &__send-button {
-    border : none;
+    width            : 200px;
+
+    margin-top       : 55px;
+
+    border           : none;
+
+    background-color : transparent;
   }
 }
 
 .modal-map {
-  display : none;
+
+  width  : 960px;
+  height : 559px;
+
+  img {
+    width : 100%;
+  }
 }

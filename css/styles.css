@@ -1456,26 +1456,60 @@ p {
 .modal__close-button:active {
   opacity: 0.3;
 }
+.modal {
+  margin: 0 auto;
+  position: relative;
+}
+.modal__close-button {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+}
 .modal-contact-us {
-  display: none;
+  width: 960px;
+  margin-bottom: 50px;
+  padding-top: 100px;
+  padding-right: 100px;
+  padding-bottom: 92px;
+  padding-left: 100px;
+  box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
+}
+.modal-contact-us__form {
+  display: flex;
+  flex-wrap: wrap;
 }
 .modal-contact-us__form label {
+  display: block;
+  margin-bottom: 13px;
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0;
 }
+.modal-contact-us__form input {
+  width: 360px;
+  height: 50px;
+}
+.modal-contact-us__form textarea {
+  width: 760px;
+  height: 156px;
+  padding-top: 18px;
+  resize: none;
+}
 .modal-contact-us__form input,
 .modal-contact-us__form textarea {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #f2f2f2;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0;
   color: rgba(70, 70, 70, 0.4);
-  background-color: #f2f2f2;
   border: none;
+  opacity: 0.5;
 }
 .modal-contact-us__form input:hover,
 .modal-contact-us__form textarea:hover {
@@ -1484,15 +1518,34 @@ p {
 .modal-contact-us__form input:focus,
 .modal-contact-us__form textarea:focus {
   background-color: white;
+  color: black;
+  opacity: 1;
   outline: 3px solid #f0c52e;
 }
-.modal-contact-us__form textarea {
-  resize: none;
+.modal-contact-us__form input:valid,
+.modal-contact-us__form textarea:valid {
+  color: black;
+  opacity: 1;
+}
+.modal-contact-us__form input:invalid,
+.modal-contact-us__form textarea:invalid {
+  background-color: #f6dada;
+}
+.modal-contact-us__name {
+  margin-right: 40px;
+  margin-bottom: 39px;
 }
 .modal-contact-us__send-button {
+  width: 200px;
+  margin-top: 55px;
   border: none;
+  background-color: transparent;
 }
 .modal-map {
-  display: none;
+  width: 960px;
+  height: 559px;
+}
+.modal-map img {
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
