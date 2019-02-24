@@ -1751,10 +1751,12 @@ p {
   position : relative;
 
   &__close-button {
-    position : absolute;
+    position   : absolute;
 
-    top      : 22px;
-    right    : 22px;
+    top        : 22px;
+    right      : 22px;
+
+    transition : 0.3s;
   }
 }
 
@@ -1784,61 +1786,65 @@ p {
       .text-main(@gilroy, 800, 18px, 24px, 0);
     }
 
-    input {
-      width  : 360px;
-      height : 50px;
-    }
+  }
 
-    textarea {
-      width       : 760px;
-      height      : 156px;
+  &__input {
+    width  : 360px;
+    height : 50px;
+  }
 
-      padding-top : 15px;
+  &__textarea {
+    width       : 760px;
+    height      : 156px;
 
-      resize      : none;
-    }
+    padding-top : 15px;
 
-    input,
-    textarea {
-      padding-left     : 20px;
-      padding-right    : 20px;
+    resize      : none;
+  }
 
-      background-color : #f2f2f2;
-      .text-main(@opensans, 400, 14px, 18px, 0);
-      color            : rgba(70, 70, 70, 0.4);
+  &__input,
+  &__textarea {
+    padding-left     : 20px;
+    padding-right    : 20px;
 
-      border           : none;
+    background-color : #f2f2f2;
+    .text-main(@opensans, 400, 14px, 18px, 0);
+    color            : rgba(70, 70, 70, 0.4);
 
-      opacity          : 0.5;
-    }
+    border           : none;
 
-    input:hover,
-    textarea:hover {
-      background-color : #eaeaea;
-    }
+    opacity          : 0.5;
+  }
 
-    input:focus,
-    textarea:focus {
-      background-color : white;
-      color            : black;
+  &__input:hover,
+  &__textarea:hover {
+    background-color : #eaeaea;
+  }
 
-      opacity          : 1;
+  &__input:focus,
+  &__textarea:focus {
+    background-color : white;
+    color            : black;
 
-      outline          : 3px solid #f0c52e;
-    }
+    opacity          : 1;
 
-    input:valid,
-    textarea:valid {
-      color   : black;
+    outline          : 3px solid #f0c52e;
+  }
 
-      opacity : 1;
-    }
+  &__input:valid,
+  &__textarea:valid {
+    color   : black;
 
-    input:invalid,
-    textarea:invalid {
-      background-color : #f6dada;
-    }
+    opacity : 1;
+  }
 
+  &__input--invalid,
+  &__textarea--invalid,
+  &__input--invalid:hover,
+  &__textarea--invalid:hover,
+  &__input--invalid:focus,
+  &__textarea--invalid {
+    background-color : #f6dada;
   }
 
   &__name {

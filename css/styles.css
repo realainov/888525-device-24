@@ -1519,6 +1519,7 @@ p {
   position: absolute;
   top: 22px;
   right: 22px;
+  transition: 0.3s;
 }
 .modal-contact-us {
   width: 960px;
@@ -1543,18 +1544,18 @@ p {
   line-height: 24px;
   letter-spacing: 0;
 }
-.modal-contact-us__form input {
+.modal-contact-us__input {
   width: 360px;
   height: 50px;
 }
-.modal-contact-us__form textarea {
+.modal-contact-us__textarea {
   width: 760px;
   height: 156px;
   padding-top: 15px;
   resize: none;
 }
-.modal-contact-us__form input,
-.modal-contact-us__form textarea {
+.modal-contact-us__input,
+.modal-contact-us__textarea {
   padding-left: 20px;
   padding-right: 20px;
   background-color: #f2f2f2;
@@ -1567,24 +1568,28 @@ p {
   border: none;
   opacity: 0.5;
 }
-.modal-contact-us__form input:hover,
-.modal-contact-us__form textarea:hover {
+.modal-contact-us__input:hover,
+.modal-contact-us__textarea:hover {
   background-color: #eaeaea;
 }
-.modal-contact-us__form input:focus,
-.modal-contact-us__form textarea:focus {
+.modal-contact-us__input:focus,
+.modal-contact-us__textarea:focus {
   background-color: white;
   color: black;
   opacity: 1;
   outline: 3px solid #f0c52e;
 }
-.modal-contact-us__form input:valid,
-.modal-contact-us__form textarea:valid {
+.modal-contact-us__input:valid,
+.modal-contact-us__textarea:valid {
   color: black;
   opacity: 1;
 }
-.modal-contact-us__form input:invalid,
-.modal-contact-us__form textarea:invalid {
+.modal-contact-us__input--invalid,
+.modal-contact-us__textarea--invalid,
+.modal-contact-us__input--invalid:hover,
+.modal-contact-us__textarea--invalid:hover,
+.modal-contact-us__input--invalid:focus,
+.modal-contact-us__textarea--invalid {
   background-color: #f6dada;
 }
 .modal-contact-us__name {

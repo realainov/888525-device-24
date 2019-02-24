@@ -397,17 +397,20 @@
   <form class="modal-contact-us__form" action="https://echo.htmlacademy.ru" method="post">
     <div class="modal-contact-us__name">
       <label for="name-field">Ваше имя:</label>
-      <input id="name-field" type="text" name="name" placeholder="Имя Фамилия" aria-label="Имя Фамилия"
+      <input class="modal-contact-us__input modal-contact-us__input--invalid" id="name-field" type="text" name="name"
+             placeholder="Имя Фамилия" aria-label="Имя Фамилия"
              pattern="[^0-9]+$" required>
     </div>
     <div class="modal-contact-us__email">
       <label for="email-field">Ваш e-mail:</label>
-      <input id="email-field" type="email" name="email" placeholder="email@example.com" aria-label="email@example.com"
+      <input class="modal-contact-us__input" id="email-field" type="email" name="email" placeholder="email@example.com"
+             aria-label="email@example.com"
              required>
     </div>
     <div class="modal-contact-us__text">
       <label for="text-field">Текст письма:</label>
-      <textarea id="text-field" name="text" placeholder="В свободной форме" aria-label="В свободной форме"
+      <textarea class="modal-contact-us__textarea" id="text-field" name="text" placeholder="В свободной форме"
+                aria-label="В свободной форме"
                 required></textarea>
     </div>
     <button class="modal-contact-us__send-button button" type="submit">Отправить</button>
