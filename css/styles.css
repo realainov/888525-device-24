@@ -1522,10 +1522,11 @@ p {
 }
 .modal-contact-us {
   width: 960px;
+  margin-top: 50px;
   margin-bottom: 50px;
-  padding-top: 100px;
+  padding-top: 95px;
   padding-right: 100px;
-  padding-bottom: 92px;
+  padding-bottom: 77px;
   padding-left: 100px;
   box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
 }
@@ -1535,7 +1536,7 @@ p {
 }
 .modal-contact-us__form label {
   display: block;
-  margin-bottom: 13px;
+  margin-bottom: 7px;
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -1549,7 +1550,7 @@ p {
 .modal-contact-us__form textarea {
   width: 760px;
   height: 156px;
-  padding-top: 18px;
+  padding-top: 15px;
   resize: none;
 }
 .modal-contact-us__form input,
@@ -1588,11 +1589,11 @@ p {
 }
 .modal-contact-us__name {
   margin-right: 40px;
-  margin-bottom: 39px;
+  margin-bottom: 32px;
 }
 .modal-contact-us__send-button {
   width: 200px;
-  margin-top: 55px;
+  margin-top: 38px;
   border: none;
   background-color: transparent;
 }
