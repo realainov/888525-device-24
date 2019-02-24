@@ -1203,17 +1203,40 @@ p {
 
     padding-top    : 80px;
     padding-bottom : 30px;
-    padding-left   : 45px;
+    padding-left   : 60px;
     padding-right  : 68px;
 
     fieldset {
-      position : relative;
+      position     : relative;
 
-      border   : none;
+      margin-left  : 0;
+      margin-right : 0;
+      margin-top   : 0;
+      padding      : 0;
+
+      border       : none;
+    }
+
+    fieldset::after {
+      content          : "";
+
+      display          : block;
+
+      width            : 200px;
+      height           : 2px;
+
+      position         : absolute;
+      top              : -12px;
+
+      background-color : black;
     }
 
     legend {
       .text-main(@gilroy, 800, 18px, 24px, 0.18px);
+    }
+
+    label {
+      .text-main(@opensans, 300, 14px, 40px, 0.14px);
     }
   }
 
@@ -1232,13 +1255,14 @@ p {
   }
 
   &__checkbox + label::before {
-    position   : absolute;
-    left       : 0;
-    top        : 7px;
+    position            : absolute;
+    left                : 0;
+    top                 : 7px;
 
-    .icon("checkbox-off.svg", 23px, 23px);
+    .icon("checkbox-off.svg", 27px, 23px);
+    background-position : left top;
 
-    transition : transform 0.3s, opacity 0.3s;
+    transition          : transform 0.3s, opacity 0.3s;
   }
 
   input:hover + label::before,
@@ -1248,8 +1272,9 @@ p {
 
   &__checkbox:checked + label::before {
     .icon("checkbox-on.svg", 27px, 23px);
+    background-position : left top;
 
-    transform : rotate(360deg);
+    transform           : rotate(360deg);
   }
 
   &__radio {
@@ -1310,58 +1335,107 @@ p {
     list-style : none;
   }
 
-  label {
-    .text-main(@opensans, 300, 14px, 40px, 0.14px);
+  &__cost {
+    margin-bottom : 45px;
+
+    legend {
+      margin-bottom : 25px;
+    }
   }
 
-  &__button {
-    width            : 200px;
-
-    margin-left      : 12px;
-
-    border           : none;
-
-    background-color : transparent;
+  &__range-filter {
+    margin-left : -5px;
   }
 
-  fieldset {
+  &__range-controls {
     position : relative;
+
+    padding  : 10px;
   }
 
-  fieldset::after {
-    content          : "";
-
-    display          : block;
-
-    width            : 200px;
+  &__scale {
     height           : 2px;
 
-    position         : absolute;
-    top              : -12px;
-
-    background-color : black;
+    background-color : #dbdbdb;
   }
 
-  &__cost {
-    margin-bottom : 100px;
+  &__bar {
+    width            : 60%;
+    height           : 2px;
+
+    background-color : #91c92f;
+  }
+
+  &__toggle {
+    width               : 20px;
+    height              : 24px;
+
+    position            : absolute;
+    top                 : 0;
+
+    background-image    : url("../img/filter-button.svg");
+    background-repeat   : no-repeat;
+    background-position : center;
+
+    cursor              : pointer;
+  }
+
+  &__toggle--min {
+    left : 0;
+  }
+
+  &__toggle--max {
+    left : 110px;
+  }
+
+  &__price-controls {
+
+    display      : flex;
+
+    padding-left : 4px;
+
+    opacity      : 0.2;
+
+    label {
+
+      width : 45%;
+
+      .text-main(@gilroy, 300, 14px, 24px, normal);
+    }
+
+    input {
+      width            : 60px;
+
+      background-color : transparent;
+
+      border           : none;
+    }
   }
 
   &__colors {
 
-    margin-bottom : 32px;
+    margin-bottom : 43px;
 
     legend {
-      margin-bottom : 14px;
+      margin-bottom : 18px;
     }
   }
 
   &__bluetooth {
 
-    margin-bottom : 20px;
+    margin-bottom : 30px;
 
     legend {
-      margin-bottom : 14px;
+      margin-bottom : 18px;
     }
+  }
+
+  &__button {
+    width            : 200px;
+
+    border           : none;
+
+    background-color : transparent;
   }
 }
 

@@ -137,6 +137,19 @@
         <form class="filters__form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="filters__cost">
             <legend>Стоимость</legend>
+            <div class="filters__range-filter">
+              <div class="filters__range-controls">
+                <div class="filters__scale">
+                  <div class="filters__bar"></div>
+                </div>
+                <div class="filters__toggle filters__toggle--min"></div>
+                <div class="filters__toggle filters__toggle--max"></div>
+              </div>
+              <div class="filters__price-controls">
+                <label class="filters__min-price">от <input name="min-price" type="number" value="0"></label>
+                <label class="filters__max-price">до <input name="max-price" type="number" value="5000"></label>
+              </div>
+            </div>
           </fieldset>
           <fieldset class="filters__colors">
             <legend>Цвет</legend>
@@ -158,7 +171,7 @@
                 <label for="red-input">Красный</label>
               </li>
               <li class="filters__color-item">
-                <input class="filters__checkbox" name="pink" id="pink-input" type="checkbox">
+                <input class="filters__checkbox" name="pink" id="pink-input" type="checkbox" disabled>
                 <label for="pink-input">Розовый</label>
               </li>
             </ul>
@@ -167,7 +180,8 @@
             <legend>Bluetooth</legend>
             <ul class="filters__bluetooth-list">
               <li class="filters__bluetooth-item">
-                <input class="filters__radio" name="is-bluetooth" id="is-bluetooth-yes" type="radio" value="yes">
+                <input class="filters__radio" name="is-bluetooth" id="is-bluetooth-yes" type="radio" value="yes"
+                       checked>
                 <label for="is-bluetooth-yes">Есть</label>
               </li>
               <li class="filters__bluetooth-item">
