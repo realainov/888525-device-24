@@ -24,7 +24,7 @@
         <button class="search-form__button" type="submit" aria-label="Найти">Найти</button>
       </form>
       <ul class="site-header__user-navigation user-navigation">
-        <li class="user-navigation__login">
+        <li class="user-navigation__item user-navigation__login">
           <a href="#">
             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12">
               <path
@@ -33,7 +33,7 @@
             Войти
           </a>
         </li>
-        <li class="user-navigation__compare">
+        <li class="user-navigation__item user-navigation__compare">
           <a href="#">
             <svg class="user-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10">
               <path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/>
@@ -41,7 +41,7 @@
             Сравнить
           </a>
         </li>
-        <li class="user-navigation__basket">
+        <li class="user-navigation__item user-navigation__basket">
           <a href="#">
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12">
               <path
@@ -54,31 +54,33 @@
         </li>
       </ul>
     </div>
-    <nav class="site-header__site-navigation site-navigation">
-      <ul class="site-navigation__list">
-        <li class="site-navigation__item">
-          <a class="site-navigation__catalog" href="#">Каталог товаров</a>
-          <ul class="site-navigation__inner-list">
-            <li class="site-navigation__inner-item">
-              <ul class="site-navigation__watch-list">
-                <li class="site-navigation__watch-item"><a href="#">Виртуальная реальность</a></li>
-                <li class="site-navigation__watch-item"><a href="monopods.html">Моноподы для селфи</a></li>
-                <li class="site-navigation__watch-item"><a href="#">Экшн-камеры</a></li>
+    <nav class="site-header__navigation catalog-navigation site-navigation">
+      <ul class="catalog-navigation__list">
+        <li class="catalog-navigation__item">
+          <a class="catalog-navigation__link" href="#">Каталог товаров</a>
+          <ul class="catalog-navigation__inner-list">
+            <li class="catalog-navigation__inner-item">
+              <ul class="catalog-navigation__watch-list">
+                <li class="catalog-navigation__watch-item"><a href="#">Виртуальная реальность</a></li>
+                <li class="catalog-navigation__watch-item"><a href="monopods.html">Моноподы для селфи</a></li>
+                <li class="catalog-navigation__watch-item"><a href="#">Экшн-камеры</a></li>
               </ul>
             </li>
-            <li class="site-navigation__inner-item">
-              <ul class="site-navigation__hand-list">
-                <li class="site-navigation__hand-item"><a href="#">Фитнес-браслеты</a></li>
-                <li class="site-navigation__hand-item"><a href="#">Умные часы</a></li>
+            <li class="catalog-navigation__inner-item">
+              <ul class="catalog-navigation__hand-list">
+                <li class="catalog-navigation__hand-item"><a href="#">Фитнес-браслеты</a></li>
+                <li class="catalog-navigation__hand-item"><a href="#">Умные часы</a></li>
               </ul>
             </li>
-            <li class="site-navigation__inner-item">
-              <ul class="site-navigation__shoot-list">
-                <li class="site-navigation__shoot-item"><a href="#">Квадрокоптеры</a></li>
+            <li class="catalog-navigation__inner-item">
+              <ul class="catalog-navigation__shoot-list">
+                <li class="catalog-navigation__shoot-item"><a href="#">Квадрокоптеры</a></li>
               </ul>
             </li>
           </ul>
         </li>
+      </ul>
+      <ul class="site-navigation__list">
         <li class="site-navigation__item"><a href="#">Доставка</a></li>
         <li class="site-navigation__item"><a href="#">Гарантия</a></li>
         <li class="site-navigation__item"><a href="#">Контакты</a></li>
@@ -181,7 +183,7 @@
             Виртуальная реальность
           </a>
         </li>
-        <li class="categories__item">
+        <li class="categories__item categories__monopods-item">
           <a href="monopods.html">
             <div class="categories__logo"><img src="img/popular-2.svg" width="86" height="117"
                                                alt="Иконка монопода для селфи"></div>
@@ -307,7 +309,7 @@
           </svg>
         </a>
         <ul class="site-footer__user-navigation user-navigation">
-          <li class="user-navigation__login">
+          <li class="user-navigation__item user-navigation__login">
             <a href="#">
               <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12">
                 <path
@@ -316,7 +318,7 @@
               Войти
             </a>
           </li>
-          <li class="user-navigation__compare">
+          <li class="user-navigation__item user-navigation__compare">
             <a href="#">
               <svg class="user-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10">
                 <path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/>
@@ -324,7 +326,7 @@
               Сравнить
             </a>
           </li>
-          <li class="user-navigation__basket">
+          <li class="user-navigation__item user-navigation__basket">
             <a href="#">
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12">
                 <path
@@ -339,14 +341,14 @@
       </div>
       <div class="site-footer__column site-footer__column-2">
         <address>г. Москва, ул. Строителей, 15</address>
-        <nav class="site-footer__site-navigation site-navigation">
+        <nav class="site-footer__navigation site-navigation">
           <ul class="site-navigation__list">
             <li class="site-navigation__item"><a href="#">Доставка</a></li>
             <li class="site-navigation__item"><a href="#">Гарантия</a></li>
             <li class="site-navigation__item"><a href="#">Контакты</a></li>
           </ul>
         </nav>
-        <p><a class="phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a></p>
+        <a class="phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
       </div>
       <div class="site-footer__column site-footer__column-3">
         <ul class="site-footer__social-list">
@@ -424,7 +426,7 @@
 </section>
 <section class="modal modal-map">
   <h2 class="visually-hidden">Как до нас добраться</h2>
-  <img src="img/map-big-3x.jpg" width="960" height="559" alt="Карта большого размера">
+  <img src="img/map-big.png" width="960" height="559" alt="Карта большого размера">
   <button class="modal__close-button" type="button" title="Закрыть окно">
     <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55">
       <path fill="#F0C52E"
