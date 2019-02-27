@@ -85,7 +85,16 @@
 
 .outline() {
   outline          : 2px solid black;
-  background-color : rgba(0, 0, 0, 0.5) !important;
+  background-color : rgba(0, 0, 0, 0.05) !important;
+}
+
+.grayscale(@_grayscale) {
+  -webkit-filter : grayscale(@_grayscale);
+  -moz-filter    : grayscale(@_grayscale);
+  -ms-filter     : grayscale(@_grayscale);
+  -o-filter      : grayscale(@_grayscale);
+  filter         : grayscale(@_grayscale);
+  filter         : gray;
 }
 
 // Styles
@@ -182,16 +191,17 @@ p {
 }
 
 .button::before {
-  @button-height : 8px;
 
   display          : block;
 
   width            : 100%;
-  height           : @button-height;
+  height           : 20%;
 
   position         : absolute;
-  top              : calc((100% - @button-height) / 2);
+  top              : 50%;
   z-index          : -1;
+
+  .transform(translateY(-50%));
 
   content          : "";
 
@@ -209,7 +219,7 @@ p {
 .button:focus::before {
   height : 100%;
 
-  top    : 0;
+  //top    : 0;
 }
 
 .button:active {
@@ -288,7 +298,7 @@ p {
     display          : none;
 
     width            : 1160px;
-    //height           : 163.5px;
+    min-height       : 163.5px;
 
     padding          : 0 0 36.5px 60px;
 
@@ -575,7 +585,7 @@ p {
   }
 
   .site-navigation__list {
-    width  : 463px;
+    width  : 470px;
 
     margin : 5px 0 0 -10px;
   }
@@ -666,24 +676,25 @@ p {
 
 .search-form {
 
-  width        : 445px;
+  width        : 444px;
   height       : 50px;
 
-  margin-right : 60px;
+  margin-right : 61px;
 
   label::before {
     position : relative;
-    left     : 3.5px;
+    left     : 5px;
     top      : 3px;
 
     .icon("search.svg", 16px, 16px);
   }
 
   &__field {
-    width            : 317px;
+    width            : 345px;
     height           : 47px;
 
-    margin-left      : 18px;
+    margin-left      : -20px;
+    padding-left     : 40px;
 
     border           : none;
 
@@ -699,9 +710,10 @@ p {
 
   &__field:focus {
     opacity : 1;
+    outline : none;
   }
 
-  &:focus-within {
+  &__field:focus {
     border-bottom : 2px solid black;
   }
 
@@ -710,12 +722,10 @@ p {
 
     width            : 85px;
 
-    padding          : 9px 0 9px 0;
+    position         : relative;
+    left             : -5px;
 
-    border-left      : 2px solid black;
-    border-top       : 2px solid black;
-    border-right     : 2px solid black;
-    border-bottom    : none;
+    padding          : 9px 0 9px 0;
 
     background-color : transparent;
     .text-main(@opensans, 300, 15px, 30px, 0.15px);
@@ -729,8 +739,14 @@ p {
     color            : white;
   }
 
-  &:focus-within &__button {
+  &__field:focus + &__button {
     visibility : visible;
+    border     : 2px solid black;
+    top        : -1.5px;
+  }
+
+  &:focus-within &__button {
+    top : -1px;
   }
 
   &__button:active {
@@ -818,6 +834,8 @@ p {
     .flexbox();
     flex-direction : column;
 
+    width          : 100%;
+
     margin         : 80px 15px 0 0;
   }
 
@@ -841,6 +859,7 @@ p {
   &__button {
     width         : 220px;
 
+    margin-top    : 51px;
     margin-bottom : 45px;
   }
 
@@ -1119,9 +1138,8 @@ p {
   }
 
   &__item a {
-    -webkit-filter : grayscale(100%);
-    filter         : grayscale(100%);
-    opacity        : 0.2;
+    .grayscale(100%);
+    opacity : 0.2;
   }
 
   &__item a:hover,
@@ -1256,7 +1274,7 @@ p {
 
     width   : 328px;
 
-    padding : 80px 68px 30px 60px;
+    padding : 70px 68px 30px 60px;
 
     fieldset {
       position     : relative;
@@ -1269,21 +1287,14 @@ p {
       border       : none;
     }
 
-    fieldset::after {
-      content          : "";
-
-      display          : block;
-
-      width            : 200px;
-      height           : 2px;
-
-      position         : absolute;
-      top              : -12px;
-
-      background-color : black;
-    }
-
     legend {
+      width            : 100%;
+
+      padding-top      : 10px;
+
+      border           : 0px solid black;
+      border-top-width : 2px;
+
       .text-main(@gilroy, 800, 18px, 24px, 0.18px);
     }
 
@@ -1319,8 +1330,8 @@ p {
     .icon("checkbox-off.svg", 27px, 23px);
     background-position : left top;
 
-    .transition(transform, 0.3s);
     .transition(opacity, 0.3s);
+    .transition(transform, 0.3s);
   }
 
   input:hover + label::before,
@@ -1394,7 +1405,7 @@ p {
   }
 
   &__cost {
-    margin-bottom : 45px;
+    margin-bottom : 30px;
 
     legend {
       margin-bottom : 25px;
@@ -1476,7 +1487,7 @@ p {
 
   &__colors {
 
-    margin-bottom : 43px;
+    margin-bottom : 33px;
 
     legend {
       margin-bottom : 18px;
@@ -1650,6 +1661,11 @@ p {
     top        : 184px;
 
     text-align : center;
+  }
+
+  &__img:hover + &__more,
+  &__img:focus + &__more {
+    display : block;
   }
 
   &__box:hover &__more,
