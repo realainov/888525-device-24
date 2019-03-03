@@ -87,7 +87,7 @@ maxToggle.onmousedown = function (e) {
 
 minResult.oninput = function() {
   if (minResult.value < 0) minResult.value = 0;
-  if (minResult.value > maxResult.value - 1143) minResult.value = maxResult.value - 1143;
+  if (minResult.value > (maxResult.value - 1143)) minResult.value = maxResult.value - 1143;
 
   minToggle.style.left = minResult.value / 10000 * rightLimit + 'px';
   bar.style.left = minResult.value / 10000 * rightLimit + 'px';
@@ -95,7 +95,7 @@ minResult.oninput = function() {
 };
 
 maxResult.oninput = function() {
-  if (maxResult.value > minResult + 1143) maxResult.value = minResult.value + 1143;
+  if (maxResult.value < (+minResult.value + 1143)) maxResult.value = +minResult.value + 1143;
   if (maxResult.value > 10000) maxResult.value = 10000;
 
   maxToggle.style.left = maxResult.value / 10000 * rightLimit + 'px';
