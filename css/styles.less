@@ -762,6 +762,28 @@ p {
 
 // Goods
 
+// Animations
+
+@keyframes line-move {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100px;
+  }
+}
+
+@keyframes figures-move {
+  0% {
+    transform: translateY(100px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .goods {
 
   width    : 1160px;
@@ -801,6 +823,9 @@ p {
 
     .text-main(@gilroy, 800, 179px, 179px, 1.79px);
     color    : white;
+
+    animation-name: figures-move;
+    animation-duration: 1s;
   }
 
   &__item:first-child::before {
@@ -826,6 +851,9 @@ p {
     content          : "";
 
     background-color : white;
+
+    animation-name: line-move;
+    animation-duration: 1s;
   }
 
   &__img-container {
@@ -859,6 +887,8 @@ p {
 
   p {
     margin-bottom : auto;
+
+    z-index: 2;
   }
 
   &__button {
