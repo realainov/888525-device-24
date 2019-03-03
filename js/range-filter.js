@@ -41,7 +41,7 @@ minToggle.onmousedown = function (e) {
 
     minResult.value = Math.round((newMinLeft / rightLimit) * 10000);
     return false;
-  }
+  };
 
   document.onmouseup = function () {
     document.onmousemove = document.onmouseup = null;
@@ -77,7 +77,7 @@ maxToggle.onmousedown = function (e) {
 
     maxResult.value = Math.round((newMaxLeft / rightLimit) * 10000);
     return false;
-  }
+  };
 
   document.onmouseup = function () {
     document.onmousemove = document.onmouseup = null;
