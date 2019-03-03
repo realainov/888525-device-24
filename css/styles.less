@@ -766,21 +766,21 @@ p {
 
 @keyframes line-move {
   0% {
-    width: 0;
+    width : 0;
   }
 
   100% {
-    width: 100px;
+    width : 100px;
   }
 }
 
 @keyframes figures-move {
   0% {
-    transform: translateY(100px);
+    transform : translateY(100px);
   }
 
   100% {
-    transform: translateY(0);
+    transform : translateY(0);
   }
 }
 
@@ -816,16 +816,16 @@ p {
   }
 
   &__item::before {
-    position : absolute;
-    left     : 942px;
-    top      : -12px;
-    z-index  : 1;
+    position           : absolute;
+    left               : 942px;
+    top                : -12px;
+    z-index            : 1;
 
     .text-main(@gilroy, 800, 179px, 179px, 1.79px);
-    color    : white;
+    color              : white;
 
-    animation-name: figures-move;
-    animation-duration: 1s;
+    animation-name     : figures-move;
+    animation-duration : 1s;
   }
 
   &__item:first-child::before {
@@ -841,19 +841,19 @@ p {
   }
 
   &__item::after {
-    width            : 100px;
-    height           : 7px;
+    width              : 100px;
+    height             : 7px;
 
-    position         : absolute;
-    right            : 460px;
-    top              : 38px;
+    position           : absolute;
+    right              : 460px;
+    top                : 38px;
 
-    content          : "";
+    content            : "";
 
-    background-color : white;
+    background-color   : white;
 
-    animation-name: line-move;
-    animation-duration: 1s;
+    animation-name     : line-move;
+    animation-duration : 1s;
   }
 
   &__img-container {
@@ -888,7 +888,7 @@ p {
   p {
     margin-bottom : auto;
 
-    z-index: 2;
+    z-index       : 2;
   }
 
   &__button {
