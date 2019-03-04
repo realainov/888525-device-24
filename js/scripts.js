@@ -105,6 +105,34 @@ if (document.querySelector(".filters__range-filter") !== null) {
   };
 }
 
+function nextSlide (buttonClass, slideClass) {
+  var buttons = document.getElementsByClassName(buttonClass);
+  var slides = document.getElementsByClassName(slideClass);
+
+  for (var i = 0; i < buttons.length; i++) {
+    var button = buttons[i];
+    var slide = slides[i];
+    if (button.classList.contains(buttonGoodsClass + "--active")) {
+      if (i - 1 === buttons.length) {
+        var buttonNext = buttons[0];
+        var slideNext = slides[0];
+        buttons[i].classList.remove(buttonGoodsClass + "--active");
+        slide[i].classList.remove(slideGoodsClass + "--show");
+        buttons[i + 1].classList.add(buttonGoodsClass + "--active");
+        slides[i + 1].classList.add(slideGoodsClass + "--show");
+      } else {
+        buttonNext = buttons[i + 1];
+        slideNext = slides[i + 1];
+        console.log(buttons[i + 1]);
+        buttons[i].classList.remove(buttonGoodsClass + "--active");
+        slides[i].classList.remove(slideGoodsClass + "--show");
+        buttons[i + 1].classList.add(buttonGoodsClass + "--active");
+        slides[i + 1].classList.add(slideGoodsClass + "--show");
+      }
+    }
+  }
+}
+
 function switchSlide (buttonClass, slideClass) {
 
   var buttons = document.getElementsByClassName(buttonClass);
@@ -140,6 +168,10 @@ if (document.querySelector(".goods__slider-button") !== null) {
   var slideGoodsClass = "goods__item";
 
   switchSlide(buttonGoodsClass, slideGoodsClass);
+
+  nextSlide(buttonGoodsClass, slideGoodsClass);
+
+  setInterval(nextSlide, 2000);
 }
 
 if (document.querySelector(".services__slider-button") !== null) {
@@ -150,6 +182,9 @@ if (document.querySelector(".services__slider-button") !== null) {
 }
 
 if (document.querySelector(".modal-contact-us") !== null) {
+
+  var modalContactUsWrapper = document.querySelector(".modal-contact-us-wrapper");
+  var modalMapWrapper = document.querySelector(".modal-map-wrapper");
 
   var openContactUs = document.querySelector(".contacts__button");
   var modalContactUs = document.querySelector(".modal-contact-us");
@@ -193,6 +228,7 @@ if (document.querySelector(".modal-contact-us") !== null) {
 
     evt.preventDefault();
 
+    modalContactUsWrapper.classList.add("modal-contact-us-wrapper--show");
     modalContactUs.classList.add("modal-contact-us--show");
 
     if (nameStorage && !emailStorage) {
@@ -217,6 +253,7 @@ if (document.querySelector(".modal-contact-us") !== null) {
 
     evt.preventDefault();
 
+    modalContactUsWrapper.classList.remove("modal-contact-us-wrapper--show");
     modalContactUs.classList.remove("modal-contact-us--show");
     modalContactUs.classList.remove("modal-contact-us--invalid");
 
@@ -261,11 +298,19 @@ if (document.querySelector(".modal-contact-us") !== null) {
       evt.preventDefault();
 
       if (modalContactUs.classList.contains("modal-contact-us--show")) {
+        modalContactUsWrapper.classList.remove("modal-contact-us-wrapper--show");
         modalContactUs.classList.remove("modal-contact-us--show");
         modalContactUs.classList.remove("modal-contact-us--invalid");
       }
 
     }
+  });
+
+  modalContactUsWrapper.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    modalContactUsWrapper.classList.remove("modal-contact-us-wrapper--show");
+    modalContactUs.classList.remove("modal-contact-us--show");
+    modalContactUs.classList.remove("modal-contact-us--invalid");
   });
 }
 
@@ -277,11 +322,13 @@ if (document.querySelector(".modal-map") !== null) {
 
   openMap.addEventListener("click", function (evt) {
     evt.preventDefault();
+    modalMapWrapper.classList.add("modal-map-wrapper--show");
     modalMap.classList.add("modal-map--show");
   });
 
   closeMap.addEventListener("click", function (evt) {
     evt.preventDefault();
+    modalMapWrapper.classList.remove("modal-map-wrapper--show");
     modalMap.classList.remove("modal-map--show");
   });
 
@@ -292,9 +339,77 @@ if (document.querySelector(".modal-map") !== null) {
       evt.preventDefault();
 
       if (modalMap.classList.contains("modal-map--show")) {
+        modalMapWrapper.classList.remove("modal-map-wrapper--show");
         modalMap.classList.remove("modal-map--show");
       }
 
     }
   });
+
+  modalMapWrapper.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    modalMapWrapper.classList.remove("modal-map-wrapper--show");
+    modalMap.classList.remove("modal-map--show");
+  });
+}
+
+if (document.querySelector(".companies__list") !== null) {
+
+  function gray (companiesLogoItem) {
+    var canvas = document.createElement('canvas');
+    var canvasContext = canvas.getContext('2d');
+
+    var imgWidth = companiesLogoItem.width;
+    var imgHeight = companiesLogoItem.height;
+    canvas.width = imgWidth;
+    canvas.height = imgHeight;
+
+    canvasContext.drawImage(companiesLogoItem, 0, 0);
+    var imgPixels = canvasContext.getImageData(0, 0, imgWidth, imgHeight);
+
+    for (var y = 0; y < imgPixels.height; y++) {
+      for (var x = 0; x < imgPixels.width; x++) {
+        var i = (y * 4) * imgPixels.width + x * 4;
+        var avg = (imgPixels.data[i] + imgPixels.data[i + 1] + imgPixels.data[i + 2]) / 3;
+        imgPixels.data[i] = avg;
+        imgPixels.data[i + 1] = avg;
+        imgPixels.data[i + 2] = avg;
+      }
+    }
+    canvasContext.putImageData(imgPixels, 0, 0, 0, 0, imgPixels.width, imgPixels.height);
+    return canvas.toDataURL();
+  }
+
+  var ua = window.navigator.userAgent.toLowerCase(), is_ie = (/trident/gi).test(ua) || (/msie/gi).test(ua);
+
+  var companiesLogos = document.querySelectorAll(".companies__item img");
+
+  var companiesLogo;
+
+  const companiesLogoSrc = [];
+
+  for (var i = 0; i < companiesLogos.length; i++) {
+    companiesLogo = companiesLogos[i];
+    companiesLogoSrc[i] = companiesLogo.src;
+  }
+
+  if (is_ie) {
+    [].forEach.call(companiesLogos, function (companiesLogoItem) {
+      companiesLogoItem.src = gray(companiesLogoItem);
+    });
+
+    [].forEach.call(companiesLogoSrc, function (companiesLogoSrcItem, companiesLogoSrcIndex, companiesLogoSrcArray) {
+      [].forEach.call(companiesLogos, function (companiesLogoItem, companiesLogoIndex) {
+        companiesLogoItem.addEventListener("mouseover", function () {
+          companiesLogoItem.src = companiesLogoSrcArray[companiesLogoIndex];
+        });
+      });
+
+      [].forEach.call(companiesLogos, function (companiesLogoItem) {
+        companiesLogoItem.addEventListener("mouseout", function () {
+          companiesLogoItem.src = gray(companiesLogoItem);
+        });
+      });
+    });
+  }
 }
