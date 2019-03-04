@@ -105,31 +105,43 @@ if (document.querySelector(".filters__range-filter") !== null) {
   };
 }
 
-function nextSlide (buttonClass, slideClass) {
+var k = 0;
+
+function nextGoodsSlide (buttonClass, slideClass) {
   var buttons = document.getElementsByClassName(buttonClass);
   var slides = document.getElementsByClassName(slideClass);
 
-  for (var i = 0; i < buttons.length; i++) {
-    var button = buttons[i];
-    var slide = slides[i];
-    if (button.classList.contains(buttonGoodsClass + "--active")) {
-      if (i - 1 === buttons.length) {
-        var buttonNext = buttons[0];
-        var slideNext = slides[0];
-        buttons[i].classList.remove(buttonGoodsClass + "--active");
-        slide[i].classList.remove(slideGoodsClass + "--show");
-        buttons[i + 1].classList.add(buttonGoodsClass + "--active");
-        slides[i + 1].classList.add(slideGoodsClass + "--show");
-      } else {
-        buttonNext = buttons[i + 1];
-        slideNext = slides[i + 1];
-        console.log(buttons[i + 1]);
-        buttons[i].classList.remove(buttonGoodsClass + "--active");
-        slides[i].classList.remove(slideGoodsClass + "--show");
-        buttons[i + 1].classList.add(buttonGoodsClass + "--active");
-        slides[i + 1].classList.add(slideGoodsClass + "--show");
-      }
-    }
+  for (var j = 0; j < buttons.length; j++) {
+    buttons[j].classList.remove(buttonClass + "--active");
+    slides[j].classList.remove(slideClass + "--show");
+  }
+
+  buttons[k].classList.add(buttonClass + "--active");
+  slides[k].classList.add(slideClass + "--show");
+
+  k++;
+  if (k === 3) {
+    k = 0;
+  }
+}
+
+var l = 0;
+
+function nextServicesSlide (buttonClass, slideClass) {
+  var buttons = document.getElementsByClassName(buttonClass);
+  var slides = document.getElementsByClassName(slideClass);
+
+  for (var j = 0; j < buttons.length; j++) {
+    buttons[j].classList.remove(buttonClass + "--active");
+    slides[j].classList.remove(slideClass + "--show");
+  }
+
+  buttons[l].classList.add(buttonClass + "--active");
+  slides[l].classList.add(slideClass + "--show");
+
+  l++;
+  if (l === 3) {
+    l = 0;
   }
 }
 
@@ -169,9 +181,9 @@ if (document.querySelector(".goods__slider-button") !== null) {
 
   switchSlide(buttonGoodsClass, slideGoodsClass);
 
-  nextSlide(buttonGoodsClass, slideGoodsClass);
-
-  setInterval(nextSlide, 2000);
+  setInterval(function () {
+    nextGoodsSlide(buttonGoodsClass, slideGoodsClass);
+  }, 5000);
 }
 
 if (document.querySelector(".services__slider-button") !== null) {
@@ -179,6 +191,10 @@ if (document.querySelector(".services__slider-button") !== null) {
   var slideServicesClass = "services__features-item";
 
   switchSlide(buttonServicesClass, slideServicesClass);
+
+  setInterval(function () {
+    nextServicesSlide(buttonServicesClass, slideServicesClass);
+  }, 5000);
 }
 
 if (document.querySelector(".modal-contact-us") !== null) {
