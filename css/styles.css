@@ -405,10 +405,13 @@ p {
 }
 .site-navigation__item {
   margin-bottom: 15px;
-  margin-left: 33px;
+  margin-left: 34px;
 }
 .site-navigation__item:last-child {
   margin-right: auto;
+  -webkit-transform: translateX(3px);
+  -ms-transform: translateX(3px);
+  transform: translateX(3px);
 }
 .site-header {
   display: -webkit-box;
@@ -504,7 +507,7 @@ p {
   display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
-  padding: 138px 0 80px 0;
+  padding: 138px 0 82px 0;
 }
 .site-main__page-information {
   padding: 32px 61px 45px;
@@ -537,7 +540,7 @@ p {
   justify-content: space-between;
 }
 .site-footer__column-1 {
-  margin-bottom: 28px;
+  margin-bottom: 27px;
 }
 .site-footer__column-2 {
   align-items: flex-start;
@@ -549,6 +552,12 @@ p {
 }
 .site-footer__user-navigation {
   max-width: 825px;
+  margin-top: -1px;
+}
+.site-footer .user-navigation__item:first-child {
+  -webkit-transform: translateX(-5px);
+  -ms-transform: translateX(-5px);
+  transform: translateX(-5px);
 }
 .site-footer__user-navigation a {
   color: rgba(255, 255, 255, 0.7);
@@ -566,7 +575,7 @@ p {
 }
 .site-footer .site-navigation__list {
   width: 470px;
-  margin: 5px 0 0 -10px;
+  margin: 6px 0 0 -10px;
 }
 .site-footer .site-navigation__list a {
   color: white;
@@ -645,8 +654,8 @@ p {
 }
 .search-form label::before {
   position: relative;
-  left: 5px;
-  top: 3px;
+  left: 4px;
+  top: 4px;
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -730,7 +739,7 @@ p {
 }
 .goods {
   width: 1160px;
-  margin: 0 0 105px 0;
+  margin: 0 0 92px 0;
   position: relative;
 }
 .goods__list {
@@ -740,7 +749,7 @@ p {
 }
 .goods__item {
   display: none;
-  padding: 0 60px 0 10px;
+  padding: 0 40px 0 20px;
   position: relative;
   background-image: -webkit-linear-gradient(top, rgba(240, 197, 46, 0.5) 113px, white 113px);
   background-image: -o-linear-gradient(top, rgba(240, 197, 46, 0.5) 113px, white 113px);
@@ -753,7 +762,7 @@ p {
 }
 .goods__item::before {
   position: absolute;
-  left: 942px;
+  left: 928px;
   top: -12px;
   z-index: 1;
   font-family: "Gilroy", Arial, sans-serif;
@@ -793,7 +802,13 @@ p {
   align-self: flex-start;
   flex-shrink: 0;
   width: 526px;
-  margin-right: 44px;
+  margin-right: 55px;
+}
+.goods__img-container-fb {
+  margin: 12px 50px 0 5px;
+}
+.goods__img-container-qc {
+  margin: 65px 45px 0 10px;
 }
 .goods__container {
   display: -webkit-box;
@@ -802,6 +817,7 @@ p {
   flex-direction: column;
   width: 100%;
   margin: 80px 15px 0 0;
+  padding-bottom: 20px;
 }
 .goods__title {
   display: block;
@@ -815,7 +831,7 @@ p {
 }
 .goods__button {
   width: 220px;
-  margin-top: 51px;
+  margin-top: 44px;
   margin-bottom: 45px;
 }
 .goods__button:hover,
@@ -826,8 +842,11 @@ p {
 .goods__button:active {
   background-color: transparent;
 }
+.goods__description {
+  margin-left: -3px;
+}
 .goods th {
-  padding: 5px 78px 0 0;
+  padding: 7px 25px 0 0;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 300;
   font-size: 13px;
@@ -851,7 +870,7 @@ p {
   padding: 0;
   position: absolute;
   right: 82px;
-  bottom: 134px;
+  bottom: 156px;
 }
 .goods__slider-item {
   margin-right: 21px;
@@ -947,10 +966,10 @@ p {
   }
 }
 .services {
-  margin-bottom: 95px;
-  background-image: -webkit-linear-gradient(top, white 42px, #e5e5e5 42px);
-  background-image: -o-linear-gradient(top, white 42px, #e5e5e5 42px);
-  background-image: linear-gradient(to bottom, white 42px, #e5e5e5 42px);
+  margin-bottom: 93px;
+  background-image: -webkit-linear-gradient(top, white 40px, #e5e5e5 40px);
+  background-image: -o-linear-gradient(top, white 40px, #e5e5e5 40px);
+  background-image: linear-gradient(to bottom, white 40px, #e5e5e5 40px);
 }
 .services__slider-list {
   width: 438px;
@@ -964,17 +983,17 @@ p {
   line-height: 24px;
   letter-spacing: 3.6px;
   text-align: center;
-  background-image: -webkit-linear-gradient(top, white 42px, #e5e5e5 42px);
-  background-image: -o-linear-gradient(top, white 42px, #e5e5e5 42px);
-  background-image: linear-gradient(to bottom, white 42px, #e5e5e5 42px);
+  background-image: -webkit-linear-gradient(top, white 40px, #e5e5e5 40px);
+  background-image: -o-linear-gradient(top, white 40px, #e5e5e5 40px);
+  background-image: linear-gradient(to bottom, white 40px, #e5e5e5 40px);
   z-index: 2;
 }
 .services__slider-list::after {
   width: 7px;
-  height: calc(100% + 10px);
+  height: calc(100% - 10px);
   position: absolute;
-  right: -6px;
-  top: -80px;
+  right: -4px;
+  top: -60px;
   content: "";
   background-color: black;
 }
@@ -982,7 +1001,7 @@ p {
   margin-bottom: 25px;
 }
 .services__slider-item:last-child {
-  margin-bottom: 140px;
+  margin-bottom: 139px;
 }
 .services__slider-button {
   width: 160px;
@@ -1008,7 +1027,7 @@ p {
 .services__features-list {
   width: 100%;
   margin: 0 0 0 122px;
-  padding: 12px 60px 120px 0;
+  padding: 0 50px 110px 0;
   position: relative;
   list-style: none;
 }
@@ -1021,17 +1040,17 @@ p {
 .services__features-item:nth-child(1) {
   display: none;
   background-image: url("../img/delivery.svg");
-  background-position: 100% 15px;
+  background-position: 97% 15px;
 }
 .services__features-item:nth-child(2) {
   display: none;
   background-image: url("../img/warranty.svg");
-  background-position: right top;
+  background-position: 100% 0;
 }
 .services__features-item:nth-child(3) {
   display: none;
   background-image: url("../img/credit.svg");
-  background-position: right top;
+  background-position: 96% top;
 }
 .services__features-list .services__features-item--show {
   display: block;
@@ -1039,6 +1058,7 @@ p {
   animation-duration: 1s;
 }
 .services__title {
+  margin-top: 10px;
   margin-bottom: 25px;
 }
 .services p {
@@ -1084,6 +1104,7 @@ p {
   flex-direction: column;
   width: 500px;
   position: relative;
+  left: -1px;
 }
 .about-us::after {
   width: 80px;
@@ -1135,6 +1156,7 @@ p {
   flex-direction: column;
   width: 560px;
   position: relative;
+  left: -1px;
 }
 .contacts::after {
   width: 80px;
@@ -1713,10 +1735,7 @@ p {
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.modal-contact-us-wrapper--show {
-  display: block;
-}
-.modal-map-wrapper--show {
+.modal-wrapper--show {
   display: block;
 }
 .modal-contact-us {
@@ -1841,8 +1860,8 @@ p {
 }
 .modal__close-button {
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 18px;
+  right: 18px;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;

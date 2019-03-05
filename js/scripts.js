@@ -120,7 +120,7 @@ function nextGoodsSlide (buttonClass, slideClass) {
   slides[k].classList.add(slideClass + "--show");
 
   k++;
-  if (k === 3) {
+  if (k === buttons.length) {
     k = 0;
   }
 }
@@ -140,7 +140,7 @@ function nextServicesSlide (buttonClass, slideClass) {
   slides[l].classList.add(slideClass + "--show");
 
   l++;
-  if (l === 3) {
+  if (l === buttons.length) {
     l = 0;
   }
 }
@@ -181,9 +181,9 @@ if (document.querySelector(".goods__slider-button") !== null) {
 
   switchSlide(buttonGoodsClass, slideGoodsClass);
 
-  setInterval(function () {
-    nextGoodsSlide(buttonGoodsClass, slideGoodsClass);
-  }, 5000);
+  // setInterval(function () {
+  //   nextGoodsSlide(buttonGoodsClass, slideGoodsClass);
+  // }, 10000);
 }
 
 if (document.querySelector(".services__slider-button") !== null) {
@@ -192,15 +192,14 @@ if (document.querySelector(".services__slider-button") !== null) {
 
   switchSlide(buttonServicesClass, slideServicesClass);
 
-  setInterval(function () {
-    nextServicesSlide(buttonServicesClass, slideServicesClass);
-  }, 5000);
+  // setInterval(function () {
+  //   nextServicesSlide(buttonServicesClass, slideServicesClass);
+  // }, 10000);
 }
 
 if (document.querySelector(".modal-contact-us") !== null) {
 
-  var modalContactUsWrapper = document.querySelector(".modal-contact-us-wrapper");
-  var modalMapWrapper = document.querySelector(".modal-map-wrapper");
+  var modalWrapper = document.querySelector(".modal-wrapper");
 
   var openContactUs = document.querySelector(".contacts__button");
   var modalContactUs = document.querySelector(".modal-contact-us");
@@ -244,7 +243,7 @@ if (document.querySelector(".modal-contact-us") !== null) {
 
     evt.preventDefault();
 
-    modalContactUsWrapper.classList.add("modal-contact-us-wrapper--show");
+    modalWrapper.classList.add("modal-wrapper--show");
     modalContactUs.classList.add("modal-contact-us--show");
 
     if (nameStorage && !emailStorage) {
@@ -269,7 +268,7 @@ if (document.querySelector(".modal-contact-us") !== null) {
 
     evt.preventDefault();
 
-    modalContactUsWrapper.classList.remove("modal-contact-us-wrapper--show");
+    modalWrapper.classList.remove("modal-wrapper--show");
     modalContactUs.classList.remove("modal-contact-us--show");
     modalContactUs.classList.remove("modal-contact-us--invalid");
 
@@ -314,7 +313,7 @@ if (document.querySelector(".modal-contact-us") !== null) {
       evt.preventDefault();
 
       if (modalContactUs.classList.contains("modal-contact-us--show")) {
-        modalContactUsWrapper.classList.remove("modal-contact-us-wrapper--show");
+        modalWrapper.classList.remove("modal-wrapper--show");
         modalContactUs.classList.remove("modal-contact-us--show");
         modalContactUs.classList.remove("modal-contact-us--invalid");
       }
@@ -322,9 +321,9 @@ if (document.querySelector(".modal-contact-us") !== null) {
     }
   });
 
-  modalContactUsWrapper.addEventListener("click", function (evt) {
+  modalWrapper.addEventListener("click", function (evt) {
     evt.preventDefault();
-    modalContactUsWrapper.classList.remove("modal-contact-us-wrapper--show");
+    modalWrapper.classList.remove("modal-wrapper--show");
     modalContactUs.classList.remove("modal-contact-us--show");
     modalContactUs.classList.remove("modal-contact-us--invalid");
   });
@@ -338,13 +337,13 @@ if (document.querySelector(".modal-map") !== null) {
 
   openMap.addEventListener("click", function (evt) {
     evt.preventDefault();
-    modalMapWrapper.classList.add("modal-map-wrapper--show");
+    modalWrapper.classList.add("modal-wrapper--show");
     modalMap.classList.add("modal-map--show");
   });
 
   closeMap.addEventListener("click", function (evt) {
     evt.preventDefault();
-    modalMapWrapper.classList.remove("modal-map-wrapper--show");
+    modalWrapper.classList.remove("modal-wrapper--show");
     modalMap.classList.remove("modal-map--show");
   });
 
@@ -355,16 +354,16 @@ if (document.querySelector(".modal-map") !== null) {
       evt.preventDefault();
 
       if (modalMap.classList.contains("modal-map--show")) {
-        modalMapWrapper.classList.remove("modal-map-wrapper--show");
+        modalWrapper.classList.remove("modal-wrapper--show");
         modalMap.classList.remove("modal-map--show");
       }
 
     }
   });
 
-  modalMapWrapper.addEventListener("click", function (evt) {
+  modalWrapper.addEventListener("click", function (evt) {
     evt.preventDefault();
-    modalMapWrapper.classList.remove("modal-map-wrapper--show");
+    modalWrapper.classList.remove("modal-wrapper--show");
     modalMap.classList.remove("modal-map--show");
   });
 }
