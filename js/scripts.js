@@ -38,9 +38,9 @@ if (document.querySelector(".filters__range-filter") !== null) {
         newMinLeft = maxResult.value / 10000 * rightLimit - minToggle.offsetWidth;
       }
 
-      minToggle.style.left = newMinLeft + 'px';
-      bar.style.left = newMinLeft + 'px';
-      bar.style.width = (maxResult.value / 10000 * rightLimit) - newMinLeft + 'px';
+      minToggle.style.left = newMinLeft + "px";
+      bar.style.left = newMinLeft + "px";
+      bar.style.width = (maxResult.value / 10000 * rightLimit) - newMinLeft + "px";
 
       minResult.value = Math.round((newMinLeft / rightLimit) * 10000);
       return false;
@@ -74,9 +74,9 @@ if (document.querySelector(".filters__range-filter") !== null) {
         newMaxLeft = rightLimit;
       }
 
-      maxToggle.style.left = newMaxLeft + 'px';
-      bar.style.right = newMaxLeft - bar.offsetWidth + 'px';
-      bar.style.width = newMaxLeft - (minResult.value / 10000 * rightLimit) + 'px';
+      maxToggle.style.left = newMaxLeft + "px";
+      bar.style.right = newMaxLeft - bar.offsetWidth + "px";
+      bar.style.width = newMaxLeft - (minResult.value / 10000 * rightLimit) + "px";
 
       maxResult.value = Math.round((newMaxLeft / rightLimit) * 10000);
       return false;
@@ -92,18 +92,18 @@ if (document.querySelector(".filters__range-filter") !== null) {
     if (minResult.value < 0) minResult.value = 0;
     if (minResult.value > (maxResult.value - 1143)) minResult.value = maxResult.value - 1143;
 
-    minToggle.style.left = minResult.value / 10000 * rightLimit + 'px';
-    bar.style.left = minResult.value / 10000 * rightLimit + 'px';
-    bar.style.width = (maxResult.value / 10000 * rightLimit) - (minResult.value / 10000 * rightLimit) + 'px';
+    minToggle.style.left = minResult.value / 10000 * rightLimit + "px";
+    bar.style.left = minResult.value / 10000 * rightLimit + "px";
+    bar.style.width = (maxResult.value / 10000 * rightLimit) - (minResult.value / 10000 * rightLimit) + "px";
   };
 
   maxResult.onchange = function () {
     if (maxResult.value < (+minResult.value + 1143)) maxResult.value = +minResult.value + 1143;
     if (maxResult.value > 10000) maxResult.value = 10000;
 
-    maxToggle.style.left = maxResult.value / 10000 * rightLimit + 'px';
-    bar.style.left = minResult.value / 10000 * rightLimit + 'px';
-    bar.style.width = (maxResult.value / 10000 * rightLimit) - (minResult.value / 10000 * rightLimit) + 'px';
+    maxToggle.style.left = maxResult.value / 10000 * rightLimit + "px";
+    bar.style.left = minResult.value / 10000 * rightLimit + "px";
+    bar.style.width = (maxResult.value / 10000 * rightLimit) - (minResult.value / 10000 * rightLimit) + "px";
   };
 }
 
@@ -379,8 +379,8 @@ if (document.querySelector(".modal-map") !== null) {
 if (document.querySelector(".companies__list") !== null) {
 
   function gray (companiesLogoItem) {
-    var canvas = document.createElement('canvas');
-    var canvasContext = canvas.getContext('2d');
+    var canvas = document.createElement("canvas");
+    var canvasContext = canvas.getContext("2d");
 
     var imgWidth = companiesLogoItem.width;
     var imgHeight = companiesLogoItem.height;

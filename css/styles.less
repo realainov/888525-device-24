@@ -55,6 +55,8 @@
 .icon(@_name-icon, @_width-icon, @_height-icon) {
   display             : inline-block;
 
+  vertical-align      : middle;
+
   width               : @_width-icon;
   height              : @_height-icon;
 
@@ -107,7 +109,9 @@ html {
 }
 
 *, *::before, *::after {
-  box-sizing : inherit;
+  box-sizing    : inherit;
+
+  outline-color : black;
 }
 
 a {
@@ -278,6 +282,11 @@ p {
 
     opacity   : 0.3;
   }
+
+  &__footer-link:hover svg,
+  &__footer-link:focus svg {
+    opacity : 0.6;
+  }
 }
 
 // Catalog Navigation
@@ -287,7 +296,7 @@ p {
   &__link::after {
     position : relative;
     left     : 12px;
-    top      : 1px;
+    top      : -5px;
 
     .icon("plus.svg", 16px, 16px);
 
@@ -362,6 +371,10 @@ p {
 
   a[href]:active {
     opacity : 0.3;
+  }
+
+  &__footer-link {
+    color : white;
   }
 
   &__list {
@@ -528,21 +541,6 @@ p {
 
   padding        : 65px 0 67px 0;
 
-  position       : relative;
-
-  &::after {
-    width            : 80px;
-    height           : 7px;
-
-    position         : absolute;
-    left             : 0;
-    bottom           : 85px;
-
-    content          : "";
-
-    background-color : #ffc600;
-  }
-
   &__column {
     .flexbox();
     justify-content : space-between;
@@ -562,6 +560,21 @@ p {
     width      : 793px;
 
     align-self : flex-end;
+
+    position   : relative;
+  }
+
+  &__column-3::after {
+    width            : 80px;
+    height           : 7px;
+
+    position         : absolute;
+    left             : -365px;
+    top              : 12px;
+
+    content          : "";
+
+    background-color : #ffc600;
   }
 
   &__user-navigation {
@@ -589,11 +602,6 @@ p {
     color : rgb(255, 255, 255);
   }
 
-  &__user-navigation a:hover svg,
-  &__user-navigation a:focus svg {
-    opacity : 0.6;
-  }
-
   &__user-navigation a:active {
     opacity : 0.3;
   }
@@ -602,10 +610,6 @@ p {
     width  : 470px;
 
     margin : 6px 0 0 -10px;
-  }
-
-  .site-navigation__list a {
-    color : white;
   }
 
   address {
@@ -631,6 +635,7 @@ p {
   &__social-list {
     .flexbox();
     justify-content : center;
+    flex-wrap       : wrap;
 
     width           : 430px;
 
@@ -654,7 +659,8 @@ p {
   }
 
   &__social-item {
-    margin-right : 23px;
+    margin-right  : 23px;
+    margin-bottom : 10px;
   }
 
   &__social-item:last-child {
@@ -700,7 +706,7 @@ p {
   label::before {
     position : relative;
     left     : 4px;
-    top      : 4px;
+    top      : 0px;
 
     .icon("search.svg", 16px, 16px);
   }
@@ -713,6 +719,7 @@ p {
     padding-left     : 40px;
 
     border           : none;
+    border-bottom    : 2px solid transparent;
 
     background-color : transparent;
     .text-main(@opensans, 300, 15px, 30px, 0.15px);
@@ -730,7 +737,7 @@ p {
   }
 
   &__field:focus {
-    border-bottom : 2px solid black;
+    border-bottom-color : black;
   }
 
   &__button {
@@ -844,16 +851,16 @@ p {
     animation-duration : 1s;
   }
 
-  &__item:first-child::before {
-    content : '01';
+  &__item:nth-child(1)::before {
+    content : "01";
   }
 
   &__item:nth-child(2)::before {
-    content : '02';
+    content : "02";
   }
 
   &__item:nth-child(3)::before {
-    content : '03';
+    content : "03";
   }
 
   &__item::after {
@@ -1004,20 +1011,20 @@ p {
     align-items : flex-end;
   }
 
-  &__item a:focus {
+  &__link:focus {
     outline : none;
   }
 
-  &__item a:hover &__logo,
-  &__item a:focus &__logo {
+  &__link:hover &__logo,
+  &__link:focus &__logo {
     background-color : @main-orange;
   }
 
-  &__item a:active img {
+  &__link:active img {
     opacity : 0.3;
   }
 
-  &__item a:active {
+  &__link:active {
     opacity : 0.5;
     .transition(all, 0s);
   }
@@ -1124,6 +1131,17 @@ p {
     outline : none;
   }
 
+  &__slider-button:active::before {
+    width              : 278px;
+    height             : 40px;
+
+    background-color   : black;
+
+    -webkit-transition : width 1s, background-color 0.3s;
+    -o-transition      : width 1s, background-color 0.3s;
+    transition         : width 1s, background-color 0.3s;
+  }
+
   &__slider-button:active {
     color : @button-orange;
   }
@@ -1169,7 +1187,7 @@ p {
     display             : none;
 
     background-image    : url("../img/delivery.svg");
-    background-position : 97% 15px;
+    background-position : 97% 23px;
   }
 
   &__features-item:nth-child(2) {
@@ -1392,7 +1410,7 @@ p {
     }
 
     legend {
-      width            : 100%;
+      width            : 200px;
 
       padding-top      : 10px;
 
@@ -1400,6 +1418,7 @@ p {
       border-top-width : 2px;
 
       .text-main(@gilroy, 800, 18px, 24px, 0.18px);
+
     }
 
     label {
@@ -1407,89 +1426,13 @@ p {
     }
   }
 
-  &__checkbox {
-    display : none;
-  }
-
-  &__checkbox + label {
-    display      : block;
-
-    padding-left : 38px;
-
-    position     : relative;
-
-    cursor       : pointer;
-  }
-
-  &__checkbox[disabled]:hover + label,
-  &__checkbox[disabled]:focus + label {
-    cursor : default;
-  }
-
-  &__checkbox + label::before {
-    position            : absolute;
-    left                : 0;
-    top                 : 7px;
-
-    .icon("checkbox-off.svg", 27px, 23px);
-    background-position : left top;
-
-    .transition(opacity, 0.3s);
-    .transition(transform, 0.3s);
-  }
-
   input:hover + label::before,
   input:focus + label::before {
     opacity : 0.6;
   }
 
-  &__checkbox:checked + label::before {
-    .icon("checkbox-on.svg", 27px, 23px);
-    background-position : left top;
-
-    .transform(rotate(360deg));
-  }
-
-  &__radio {
-    display : none;
-  }
-
-  &__radio + label {
-    display      : block;
-
-    padding-left : 38px;
-
-    position     : relative;
-
-    cursor       : pointer;
-  }
-
-  &__radio + label::before {
-    position : absolute;
-    left     : 0;
-    top      : 7px;
-
-    .icon("radio-off.svg", 25px, 25px);
-  }
-
-  &__radio:hover + label::before,
-  &__radio:focus + label::before {
-    .icon("radio-on.svg", 25px, 25px);
-  }
-
-  &__radio[disabled]:hover + label::before,
-  &__radio[disabled]:focus + label::before {
-    .icon("radio-off.svg", 25px, 25px);
-    cursor : default;
-  }
-
-  &__radio[disabled]:hover + label,
-  &__radio[disabled]:focus + label {
-    cursor : default;
-  }
-
-  &__radio:checked + label::before {
-    .icon("radio-on.svg", 25px, 25px);
+  input:focus + label {
+    outline : auto;
   }
 
   input[disabled] + label {
@@ -1527,6 +1470,7 @@ p {
   }
 
   &__scale {
+    width            : 195px;
     height           : 2px;
 
     background-color : #dbdbdb;
@@ -1577,7 +1521,7 @@ p {
 
     label {
 
-      width : 45%;
+      width : 42%;
 
       .text-main(@gilroy, 300, 14px, 24px, normal);
     }
@@ -1600,6 +1544,38 @@ p {
     }
   }
 
+  &__checkbox + label {
+    margin-left : 38px;
+
+    position    : relative;
+
+    cursor      : pointer;
+  }
+
+  &__checkbox[disabled]:hover + label,
+  &__checkbox[disabled]:focus + label {
+    cursor : default;
+  }
+
+  &__checkbox + label::before {
+    position            : absolute;
+    left                : -39px;
+    top                 : -3px;
+
+    .icon("checkbox-off.svg", 27px, 23px);
+    background-position : left top;
+
+    .transition(opacity, 0.3s);
+    .transition(transform, 0.3s);
+  }
+
+  &__checkbox:checked + label::before {
+    .icon("checkbox-on.svg", 27px, 23px);
+    background-position : left top;
+
+    .transform(rotate(360deg));
+  }
+
   &__bluetooth {
 
     margin-bottom : 30px;
@@ -1607,6 +1583,42 @@ p {
     legend {
       margin-bottom : 18px;
     }
+  }
+
+  &__radio + label {
+    margin-left : 38px;
+
+    position    : relative;
+
+    cursor      : pointer;
+  }
+
+  &__radio + label::before {
+    position : absolute;
+    left     : -39px;
+    top      : -3px;
+
+    .icon("radio-off.svg", 25px, 25px);
+  }
+
+  &__radio:hover + label::before,
+  &__radio:focus + label::before {
+    .icon("radio-on.svg", 25px, 25px);
+  }
+
+  &__radio[disabled]:hover + label::before,
+  &__radio[disabled]:focus + label::before {
+    .icon("radio-off.svg", 25px, 25px);
+    cursor : default;
+  }
+
+  &__radio[disabled]:hover + label,
+  &__radio[disabled]:focus + label {
+    cursor : default;
+  }
+
+  &__radio:checked + label::before {
+    .icon("radio-on.svg", 25px, 25px);
   }
 
   &__button {
@@ -1746,9 +1758,11 @@ p {
   }
 
   &__name {
-    display : inline-block;
+    display        : inline-block;
 
-    width   : 260px;
+    vertical-align : baseline;
+
+    width          : 260px;
 
     .text-main(@gilroy, 800, 18px, 24px, 0.18px);
   }
