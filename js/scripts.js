@@ -1,3 +1,5 @@
+var ua = window.navigator.userAgent.toLowerCase(), is_ie = (/trident/gi).test(ua) || (/msie/gi).test(ua);
+
 if (document.querySelector(".filters__range-filter") !== null) {
   var scale = document.querySelector(".filters__scale");
   var bar = document.querySelector(".filters__bar");
@@ -181,9 +183,9 @@ if (document.querySelector(".goods__slider-button") !== null) {
 
   switchSlide(buttonGoodsClass, slideGoodsClass);
 
-  // setInterval(function () {
-  //   nextGoodsSlide(buttonGoodsClass, slideGoodsClass);
-  // }, 10000);
+  setInterval(function () {
+    nextGoodsSlide(buttonGoodsClass, slideGoodsClass);
+  }, 10000);
 }
 
 if (document.querySelector(".services__slider-button") !== null) {
@@ -192,9 +194,15 @@ if (document.querySelector(".services__slider-button") !== null) {
 
   switchSlide(buttonServicesClass, slideServicesClass);
 
-  // setInterval(function () {
-  //   nextServicesSlide(buttonServicesClass, slideServicesClass);
-  // }, 10000);
+  setInterval(function () {
+    nextServicesSlide(buttonServicesClass, slideServicesClass);
+  }, 10000);
+
+  if (is_ie) {
+    var servicesList = document.querySelector(".services__slider-list");
+
+    servicesList.style.width = 410 + "px";
+  }
 }
 
 if (document.querySelector(".modal-contact-us") !== null) {
@@ -394,8 +402,6 @@ if (document.querySelector(".companies__list") !== null) {
     canvasContext.putImageData(imgPixels, 0, 0, 0, 0, imgPixels.width, imgPixels.height);
     return canvas.toDataURL();
   }
-
-  var ua = window.navigator.userAgent.toLowerCase(), is_ie = (/trident/gi).test(ua) || (/msie/gi).test(ua);
 
   var companiesLogos = document.querySelectorAll(".companies__item img");
 

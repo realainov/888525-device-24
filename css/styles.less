@@ -272,10 +272,11 @@ p {
   }
 
   &__quit {
-    position : relative;
-    right    : 20px;
+    flex-grow : 1;
+    position  : relative;
+    right     : 20px;
 
-    opacity  : 0.3;
+    opacity   : 0.3;
   }
 }
 
@@ -564,13 +565,19 @@ p {
   }
 
   &__user-navigation {
-    max-width : 825px;
+    max-width  : 825px;
 
-    margin-top: -1px;
+    margin-top : -1px;
   }
 
-  .user-navigation__item:first-child {
+  .user-navigation__login {
     .transform(translateX(-5px));
+  }
+
+  .user-navigation__quit {
+    margin-left : 22px;
+
+    right       : 3px;
   }
 
   &__user-navigation a {
@@ -688,7 +695,7 @@ p {
 
   margin-right : 61px;
 
-  position: relative;
+  position     : relative;
 
   label::before {
     position : relative;
@@ -733,7 +740,7 @@ p {
 
     position         : absolute;
     right            : 15px;
-    top: -5px;
+    top              : -5px;
 
     padding          : 9px 0 9px 0;
 
@@ -811,7 +818,7 @@ p {
   &__item {
     display          : none;
 
-    padding          : 0 40px 0 20px;
+    padding          : 0 35px 0 20px;
 
     position         : relative;
 
@@ -877,11 +884,11 @@ p {
   }
 
   &__img-container-fb {
-    margin: 12px 50px 0 5px;
+    margin : 12px 50px 0 5px;
   }
 
   &__img-container-qc {
-    margin: 65px 45px 0 10px;
+    margin : 65px 45px 0 10px;
   }
 
   &__container {
@@ -891,7 +898,7 @@ p {
     width          : 100%;
 
     margin         : 80px 15px 0 0;
-    padding-bottom: 20px;
+    padding-bottom : 20px;
   }
 
   &__title {
@@ -928,7 +935,7 @@ p {
   }
 
   &__description {
-    margin-left: -3px;
+    margin-left : -3px;
   }
 
   th {
@@ -1187,7 +1194,7 @@ p {
   }
 
   &__title {
-    margin-top: 10px;
+    margin-top    : 10px;
     margin-bottom : 25px;
   }
 
@@ -1247,7 +1254,7 @@ p {
   width          : 500px;
 
   position       : relative;
-  left: -1px;
+  left           : -1px;
 
   &::after {
     width            : 80px;
@@ -1308,7 +1315,7 @@ p {
   width          : 560px;
 
   position       : relative;
-  left: -1px;
+  left           : -1px;
 
   &::after {
     width            : 80px;
@@ -1371,7 +1378,7 @@ p {
 
     width   : 328px;
 
-    padding : 70px 68px 30px 60px;
+    padding : 68px 68px 30px 60px;
 
     fieldset {
       position     : relative;
@@ -1502,7 +1509,7 @@ p {
   }
 
   &__cost {
-    margin-bottom : 30px;
+    margin-bottom : 33px;
 
     legend {
       margin-bottom : 25px;
@@ -1586,10 +1593,10 @@ p {
 
   &__colors {
 
-    margin-bottom : 33px;
+    margin-bottom : 30px;
 
     legend {
-      margin-bottom : 18px;
+      margin-bottom : 21px;
     }
   }
 
@@ -1840,14 +1847,14 @@ p {
   &__navigation-list {
     .flexbox();
 
-    margin     : 0;
+    margin     : 1px 0 0 10px;
     padding    : 0;
 
     list-style : none;
   }
 
   &__navigation-item {
-    margin-right : 30px;
+    margin-right : 27px;
   }
 
   &__navigation-item:last-child {
@@ -1964,20 +1971,20 @@ p {
 // Modal Wrapper
 
 .modal-wrapper {
-  display: none;
+  display          : none;
 
-  width: 100%;
-  height: 100%;
+  width            : 100%;
+  height           : 100%;
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
+  position         : fixed;
+  top              : 0;
+  left             : 0;
+  z-index          : 100;
 
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color : rgba(0, 0, 0, 0.5);
 
   &--show {
-    display: block;
+    display : block;
   }
 }
 
