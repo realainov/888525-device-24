@@ -1287,6 +1287,7 @@ p {
   padding: 10px;
 }
 .filters__scale {
+  width: 195px;
   height: 2px;
   background-color: #dbdbdb;
 }
@@ -1315,7 +1316,7 @@ p {
   left: 0;
 }
 .filters__toggle--max {
-  left: 175px;
+  left: 185px;
 }
 .filters__price-controls {
   display: -webkit-box;
