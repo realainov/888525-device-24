@@ -1289,6 +1289,7 @@ p {
 .filters__scale {
   width: 195px;
   height: 2px;
+  overflow: hidden;
   background-color: #dbdbdb;
 }
 .filters__bar {
